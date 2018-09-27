@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activity_admin_sangit_upload"
+    android:background="#FD7165">
+    <LinearLayout
+        android:background="@drawable/shape_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="30dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Upload Sangit Details"
+            android:textColor="#FF1100"
+            android:textSize="28dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ed_admin_sangit_venue_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="20"
+                android:inputType="textPersonName"
+                android:hint="Enter Venue"
+                android:text="" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ed_admin_sangit_poc_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="20"
+                android:inputType="number"
+                android:hint="Enter POC"
+                android:text="" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ed_admin_sangit_desc_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="20"
+                android:inputType="textPersonName"
+                android:hint="Enter Description"
+                android:text="" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/btn_upload_sangit"
+            android:text="Upload Details"
+            android:textSize="20dp"
+            android:background="@drawable/shape_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

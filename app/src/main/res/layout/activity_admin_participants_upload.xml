@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FD7165"
+    tools:context=".activity_admin_participants_upload">
+
+
+    <LinearLayout
+        android:background="@drawable/shape_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="30dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Upload Participants Details"
+        android:textColor="#FF1100"
+        android:textSize="28dp" />
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/txt_admin_partname_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="20"
+                android:inputType="textPersonName"
+                android:hint="Enter Participant's Name"
+                android:text="" />
+
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/txt_admin_partno_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="20"
+                android:inputType="textPersonName"
+                android:hint="Enter Participant's No"
+                android:text="" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/txt_admin_parttype_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="20"
+                android:inputType="textPersonName"
+                android:hint="Enter Performance Type"
+                android:text="" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/btn_upload_partcipants"
+            android:text="Upload Participant's Detail"
+            android:textSize="20dp"
+            android:background="@drawable/shape_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+</ScrollView>

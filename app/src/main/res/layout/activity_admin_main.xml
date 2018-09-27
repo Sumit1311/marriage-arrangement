@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout_admin"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/action_bar"
+            layout="@layout/action_bar" />
+        <include android:id="@+id/details"
+            layout="@layout/activity_login_activity"/>
+    </LinearLayout>
+    <fragment
+        android:id="@+id/fragment_navigation_drawer_admin"
+        android:name="com.example.home.wedding.Navigation_drawer_admin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        />
+</android.support.v4.widget.DrawerLayout>

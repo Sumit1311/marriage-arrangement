@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/topBlock_admin"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/vs"
+                    app:riv_oval="true"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/imgprofile_admin" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txthead_admin"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Welcome Admin"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/lladminhome"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/home" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:text="Home"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#666" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladmininvitation"
+                    android:padding="10dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/invitation" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Invitation"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladmininviupload"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/upload" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Upload E-Invitation"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladmininvidelete"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/delete" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Delete E-Invitation"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/lladminmenu"
+                android:padding="10dp">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/menu" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:text="Menu Details"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#666" />
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminmenuupload"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/upload" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Upload Menu Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminmenuedit"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/edit" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Edit Menu Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminmenudelete"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/delete" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Delete Menu Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminmenuview"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/view" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="View Menu Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/lladminSangit"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/sangit_rajani" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:text="Sangit Rajani"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminsangitupload"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/upload" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Upload Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminsangitdelete"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/delete" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Delete Sangit Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminsangitview"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/view" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="View Sangit Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/lladminparticipants"
+                android:padding="10dp">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/participants" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:text="Participants"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminparticipantupload"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/upload" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Upload Participants Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminparticipantedit"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/edit" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Edit Participants Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminparticipantdelete"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/delete" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Delete Participants Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminparticipantview"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/view" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="View Participants Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/lladminothers"
+                android:padding="10dp">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/others" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:text="Others"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminothersupload"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/upload" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Upload Others Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminothersedit"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/edit" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Edit Others Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminothersdelete"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/delete" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Delete Others Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminothersview"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/view" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="View Others Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladmintransport"
+                    android:padding="10dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/transport" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Transport"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#666" />
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladmintransportupload"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/upload" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Upload Transport Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladmintransportedit"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/edit" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Edit Transport Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladmintransportdelete"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/delete" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Delete Transport Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladmintransportview"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/view" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="View Transport Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminroomdetails"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/room_details" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Room Details"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminroomdetailsupload"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/upload"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Upload Room Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminroomdetailsedit"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/edit" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Edit Room Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminroomdetailsdelete"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/delete" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="Delete Room Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/lladminroomdetailsview"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/view" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="View Room Details"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#666" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/lladminsendsms"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/send_sms" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:text="Send SMS"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#666" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/lladminshareapp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/shareapp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:text="Share App"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#666" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

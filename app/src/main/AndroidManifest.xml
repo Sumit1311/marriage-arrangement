@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.home.wedding">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Login_activity" />
+        <activity
+            android:name=".admin_main"
+            android:label="@string/title_activity_admin_main"
+            android:theme="@style/AppThemeguest" />
+        <activity
+            android:name=".guest_main"
+            android:theme="@style/AppThemeguest" />
+        <activity
+            android:name=".activity_disp_invitation_list"
+            android:parentActivityName=".guest_main" />
+        <activity android:name=".activity_dispfullimg_guest" />
+
+        <activity
+            android:name=".activity_disp_transport_list1"
+            android:parentActivityName=".guest_main" />
+        <activity android:name=".activity_disp_transport_list2" />
+        <activity
+            android:name=".activity_admin_menu_upload"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_menu_edit"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_menu_delete"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_menu_view"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_sangit_upload"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_sangit_delete"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_sangit_view"
+            android:parentActivityName=".admin_main" />
+        <activity android:name=".activity_guest_disp_sangit"></activity>
+        <activity android:name=".activity_admin_other_upload" android:parentActivityName=".admin_main"/>
+        <activity android:name=".activity_admin_transport_upload" android:parentActivityName=".admin_main"/>
+    </application>
+
+</manifest>
