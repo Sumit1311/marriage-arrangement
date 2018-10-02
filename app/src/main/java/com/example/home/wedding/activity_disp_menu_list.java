@@ -41,7 +41,7 @@ public class activity_disp_menu_list extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<menu_details>> call, Response<List<menu_details>> response) {
                 List<menu_details> slist=response.body();
-                Toast.makeText(getApplicationContext(),slist.get(0).getMenu_img(),Toast.LENGTH_LONG).show();
+        //        Toast.makeText(getApplicationContext(),slist.get(0).getMenu_img(),Toast.LENGTH_LONG).show();
                 al1=new ArrayList<>();
                 al2=new ArrayList<>();
                 for(int i=0;i<slist.size();i++)
@@ -53,7 +53,7 @@ public class activity_disp_menu_list extends AppCompatActivity {
                         md1.setMenu_type(slist.get(i).getMenu_type());
                         md1.setMenu_time(slist.get(i).getMenu_time());
                         md1.setMenu_dt(slist.get(i).getMenu_dt());
-                        md1.setMenu_img(slist.get(i).getMenu_img());
+          //              md1.setMenu_img(slist.get(i).getMenu_img());
                         al1.add(md1);
                     //}
                     /*else if(slist.get(i).getMenu_dt().equals("19/12/2018"))
@@ -78,15 +78,15 @@ public class activity_disp_menu_list extends AppCompatActivity {
                 rv1.setHasFixedSize(true);
                 rv1.setLayoutManager(lm1);
 */
-                menu_adapter ma1=new menu_adapter(activity_disp_menu_list.this,al1, new customclicklistener() {
+                /*menu_adapter ma1=new menu_adapter(activity_disp_menu_list.this,al1, new customclicklistener() {
                     @Override
                     public void itemclick(View v, int position) {
                         /*String path=al1.get(position).getMenu_img_path();
                         Intent i1=new Intent(getApplicationContext(),activity_dispfullimg_guest.class);
                         i1.putExtra("path",path);
-                        startActivity(i1);*/
+                        startActivity(i1);
                     }
-                });
+                });*/
 
   /*              menu_adapter ma2=new menu_adapter(activity_disp_menu_list.this, al2, new customclicklistener() {
                     @Override
@@ -98,7 +98,7 @@ public class activity_disp_menu_list extends AppCompatActivity {
                     }
                 });
 */
-                rv.setAdapter(ma1);
+                //rv.setAdapter(ma1);
   //              rv1.setAdapter(ma2);
 
             }

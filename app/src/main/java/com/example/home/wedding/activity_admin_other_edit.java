@@ -15,7 +15,7 @@ import retrofit2.Response;
 
 public class activity_admin_other_edit extends AppCompatActivity {
     Spinner sp1;
-    EditText et1,et2;
+    EditText et1,et2,et3;
     Button btn;
 
     @Override
@@ -35,13 +35,15 @@ public class activity_admin_other_edit extends AppCompatActivity {
                 et2=(EditText)findViewById(R.id.txt_admin_other_des_edit);
                 String description=et2.getText().toString();
 
+                et3=(EditText)findViewById(R.id.txt_admin_other_poc_edit);
+                String poc=et2.getText().toString();
+
                 RestAdapter ra = new RestAdapter.Builder().setEndpoint(Api.url).build();
                 Api api = ra.create(Api.class);
-
-                api.editother(vidhiname, venue, description, new Callback<Response>() {
+                api.editother(venue, poc, description, vidhiname, new Callback<Response>() {
                     @Override
                     public void success(Response response, retrofit.client.Response response2) {
-                        Toast.makeText(getApplicationContext(),"OK",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"Record Successfully Updated", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
@@ -49,6 +51,7 @@ public class activity_admin_other_edit extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
                     }
                 });
+
             }
         });
     }

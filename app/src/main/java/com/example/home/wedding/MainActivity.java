@@ -19,6 +19,7 @@ import static android.Manifest.permission.CALL_PHONE;
 import static android.Manifest.permission.INTERNET;
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.READ_PHONE_STATE;
+import static android.Manifest.permission.SEND_SMS;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
                     boolean callphone=grantResults[2]==PackageManager.PERMISSION_GRANTED;
                     boolean readphonestate=grantResults[3]==PackageManager.PERMISSION_GRANTED;
                     boolean readd=grantResults[4]==PackageManager.PERMISSION_GRANTED;
-                    if (intern && writed && callphone && readphonestate && readd) {
+                    boolean sends=grantResults[5]==PackageManager.PERMISSION_GRANTED;
+                    if (intern && writed && callphone && readphonestate && readd && sends) {
                         //Snackbar.make(ll1, "Permission Granted, Now you can access location data and camera.", Snackbar.LENGTH_LONG).show();
                     }
                     else {
@@ -79,14 +81,14 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(i_admin);
                     }
                 });
-               arranger=(LinearLayout)myDialog.findViewById(R.id.arranger);
+              /*  arranger=(LinearLayout)myDialog.findViewById(R.id.arranger);
                 arranger.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent i_arranger=new Intent(MainActivity.this,arranger_login.class);
+                        Intent i_arranger=new Intent(MainActivity.this,Arranger.class);
                         startActivity(i_arranger);
                     }
-                });
+                });*/
                 guest=(LinearLayout)myDialog.findViewById(R.id.guest);
                 guest.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -108,10 +110,11 @@ public class MainActivity extends AppCompatActivity {
         int result2=ContextCompat.checkSelfPermission(getApplicationContext(),READ_PHONE_STATE);
         int result3= ContextCompat.checkSelfPermission(getApplicationContext(),CALL_PHONE);
         int result4=ContextCompat.checkSelfPermission(getApplicationContext(),READ_EXTERNAL_STORAGE);
-        return result == PackageManager.PERMISSION_GRANTED && result1 == PackageManager.PERMISSION_GRANTED && result2==PackageManager.PERMISSION_GRANTED && result3==PackageManager.PERMISSION_GRANTED && result4==PackageManager.PERMISSION_GRANTED;
+        int result5=ContextCompat.checkSelfPermission(getApplicationContext(),SEND_SMS);
+        return result == PackageManager.PERMISSION_GRANTED && result1 == PackageManager.PERMISSION_GRANTED && result2==PackageManager.PERMISSION_GRANTED && result3==PackageManager.PERMISSION_GRANTED && result4==PackageManager.PERMISSION_GRANTED && result5==PackageManager.PERMISSION_GRANTED;
     }
 
     private void requestPermission() {
-        ActivityCompat.requestPermissions(this, new String[]{INTERNET,WRITE_EXTERNAL_STORAGE,READ_PHONE_STATE,CALL_PHONE,READ_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
+        ActivityCompat.requestPermissions(this, new String[]{INTERNET,WRITE_EXTERNAL_STORAGE,READ_PHONE_STATE,CALL_PHONE,READ_EXTERNAL_STORAGE,SEND_SMS}, PERMISSION_REQUEST_CODE);
     }
 }

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FD7165"
+    tools:context=".activity_admin_trans_upload">
+    <LinearLayout
+        android:background="@drawable/shape_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="30dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Upload Transport Details"
+        android:textColor="#FF1100"
+        android:textSize="28dp" />
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="#FF1100"
+        android:text="Select Route of Transport"/>
+    <Spinner
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:prompt="@string/mtypeheading"
+        android:id="@+id/spin_admin_transport_route_upload"
+        android:entries="@array/trans">
+    </Spinner>
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/txt_admin_trans_drivername_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="20"
+                android:inputType="textPersonName"
+                android:hint="Enter Driver Name"
+                android:text="" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/txt_admin_other_driverno_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="20"
+                android:inputType="number"
+                android:hint="Enter Driver No"
+                android:text="" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/txt_admin_vehicleno_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="20"
+                android:inputType="textPersonName"
+                android:hint="Enter Vehicle No"
+                android:text="" />
+        </android.support.design.widget.TextInputLayout>
+        <TextView
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="#FF1100"
+            android:text="Select Date"/>
+        <Spinner
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:prompt="@string/mtypeheading"
+            android:id="@+id/spin_admin_transport_date_upload"
+            android:entries="@array/mdt">
+        </Spinner>
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/btn_upload_trans"
+            android:text="Upload Transport Details"
+            android:textSize="14dp"
+            android:background="@drawable/shape_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</ScrollView>

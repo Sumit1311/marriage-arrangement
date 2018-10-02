@@ -2,7 +2,7 @@
 	 $host = "localhost";
 	 $user = "root";
  	 $password = "";
- 	 $database = "weddingdb";
+ 	 $database = "wedding";
 	
 	$con=mysqli_connect($host,$user,$password);
 	mysqli_select_db($con,$database) or die("Error in selecting the database:".mysql_error());
@@ -11,7 +11,9 @@
 	$menu_time=$_POST['menu_time'];
 	$menu_dt=$_POST['menu_dt'];
 	
-	//$r=mysqli_query($con,"update tbl_menu set menu_type='kkk',menu_time='oooo',menu_dt='eeee' where mid=1");	
-	$r=mysqli_query($con,"update tbl_menu set menu_type='$menu_type',menu_time='$menu_time',menu_dt='$menu_dt' where mid=$mid");	
+//$r=mysqli_query($con,"update tbl_menu set menu_type='ddd',menu_time='8 to 9',menu_dt='1000' where m_id=2");	
+	
+	
+	$r=mysqli_query($con,"update tbl_menu set menu_type='$menu_type',menu_time='$menu_time',menu_dt='$menu_dt' where m_id=$mid");	
 	
 ?>	  

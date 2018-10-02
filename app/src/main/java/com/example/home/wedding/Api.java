@@ -7,7 +7,7 @@ import retrofit.http.FormUrlEncoded;
 import retrofit.http.POST;
 
 public interface Api {
-    String url="http://192.168.43.119/wedding/";
+    String url="http://192.168.43.42:81/wedding/";
     @FormUrlEncoded
     @POST("/insert_menu.php")
     public void insertmenu
@@ -16,39 +16,6 @@ public interface Api {
                     @Field("menu_time") String menu_time,
                     @Field("menu_dt") String menu_dt,
                     Callback<Response> callback);
-
-    @FormUrlEncoded
-    @POST("/insert_sangit.php")
-    public void insertsangit
-            (
-                    @Field("venue") String venue,
-                    @Field("poc") String poc,
-                    @Field("description") String description,
-                    Callback<Response> callback);
-
-    @FormUrlEncoded
-    @POST("/insert_other.php")
-    public void insertother
-            (
-                    @Field("venue") String venue,
-                    @Field("poc") String poc,
-                    @Field("description") String description,
-                    @Field("vidhiname") String vidhiname,
-                    Callback<Response> callback);
-
-
-
-    @FormUrlEncoded
-    @POST("/insert_transport.php")
-    public void inserttransport
-            (
-                    @Field("route") String route,
-                    @Field("drivername") String drivername,
-                    @Field("driverno") String driverno,
-                    @Field("vehicleno") String vehicleno,
-                    @Field("date") String date,
-                    Callback<Response> callback);
-
 
     @FormUrlEncoded
     @POST("/edit_menu.php")
@@ -60,59 +27,50 @@ public interface Api {
                     @Field("menu_dt") String menu_dt,
                     Callback<Response> callback);
 
+    @FormUrlEncoded
+    @POST("/delete_menu.php")
+    public void deletemenu
+            (
+                    @Field("mid") int mid,
+                    Callback<Response> callback
+            );
+
+    @FormUrlEncoded
+    @POST("/insert_sangit.php")
+    public void insertsangit
+            (
+                    @Field("venue") String venue,
+                    @Field("poc") String poc,
+                    @Field("description") String description,
+                    Callback<Response> callback);
+
+    @FormUrlEncoded
+    @POST("/delete_sangit.php")
+    public void deletesangit
+            (
+                    @Field("venue") String venue,
+                    Callback<Response> callback
+            );
+
+    @FormUrlEncoded
+    @POST("/insert_other.php")
+    public void insertother
+            (
+                    @Field("venue") String venue,
+                    @Field("poc") String poc,
+                    @Field("description") String description,
+                    @Field("vidhiname") String vidhiname,
+                    Callback<Response> callback);
 
     @FormUrlEncoded
     @POST("/edit_other.php")
     public void editother
             (
-                    @Field("vidhiname") String vidhiname,
                     @Field("venue") String venue,
+                    @Field("poc") String poc,
                     @Field("description") String description,
+                    @Field("vidhiname") String vidhiname,
                     Callback<Response> callback);
-
-    @FormUrlEncoded
-    @POST("/edit_transport.php")
-    public void edittransport
-            (
-                    @Field("route") String route,
-                    @Field("drivername") String drivername,
-                    @Field("driverno") int driverno,
-                    @Field("vehicleno") String vehicleno,
-                    @Field("transdate") String transdate,
-                    Callback<Response> callback);
-
-    @FormUrlEncoded
-    @POST("/delete_menu.php")
-    public void deletemenu
-            (
-                @Field("mid") int mid,
-                Callback<Response> callback
-            );
-
-    @FormUrlEncoded
-    @POST("/delete_invitation.php")
-    public void deleteinvite
-            (
-                    @Field("pageno") String pageno,
-                    Callback<Response> callback
-            );
-
-    @FormUrlEncoded
-    @POST("/delete_participants.php")
-    public void deleteparticipants
-            (
-                    @Field("partname") String partname,
-                    Callback<Response> callback
-            );
-
-    @FormUrlEncoded
-    @POST("/delete_transport.php")
-    public void deletetransport
-            (
-                    @Field("vehicleno") String vehicleno,
-
-                    Callback<Response> callback
-            );
 
     @FormUrlEncoded
     @POST("/delete_other.php")
@@ -123,21 +81,51 @@ public interface Api {
             );
 
     @FormUrlEncoded
-    @POST("/insert_participants.php")
-    public void insertparticipants
+    @POST("/insert_transport.php")
+    public void inserttransport
             (
-                    @Field("partname") String partname,
-                    @Field("partno") String partno,
-                    @Field("parttype") String parttype,
-                    Callback<Response> callback
-            );
+                    @Field("route") String route,
+                    @Field("drivername") String drivername,
+                    @Field("driverno") String driverno,
+                    @Field("vehicleno") String vehicleno,
+                    @Field("dt") String dt,
+                    Callback<Response> callback);
 
     @FormUrlEncoded
-    @POST("/delete_sangit.php")
-    public void deletesangit
+    @POST("/edit_transport.php")
+    public void edittransport
             (
-                    @Field("venue") String venue,
+                    @Field("t_id") int t_id,
+                    @Field("route") String route,
+                    @Field("drivername") String drivername,
+                    @Field("driverno") String driverno,
+                    @Field("vehicleno") String vehicleno,
+                    @Field("dt") String dt,
+                    Callback<Response> callback);
 
+    @FormUrlEncoded
+    @POST("/delete_transport.php")
+    public void deletetransport
+            (
+                    @Field("t_id") int t_id,
                     Callback<Response> callback
             );
+
+
+    @FormUrlEncoded
+    @POST("/insert_roomguest.php")
+    public void insertroomguest
+            (
+                    @Field("roomno") String roomno,
+                    @Field("guest_nm") String guest_nm,
+                    @Field("guest_mob") String guest_mob,
+                    Callback<Response> callback);
+    @FormUrlEncoded
+    @POST("/delete_room.php")
+    public void deleteroom
+            (
+                    @Field("roomno") String roomno,
+                    Callback<Response> callback
+            );
+
 }

@@ -1,61 +1,54 @@
 package com.example.home.model;
 
 public class transport {
-    int v_id;
-    String driver_nm;
-
-    public String getVehicle_path() {
-        return vehicle_path;
+    public int getT_id() {
+        return t_id;
     }
 
-    public void setVehicle_path(String vehicle_path) {
-        this.vehicle_path = vehicle_path;
+    public void setT_id(int t_id) {
+        this.t_id = t_id;
     }
 
-    String vehicle_path;
-
-    public int getV_id() {
-        return v_id;
+    public String getRoute() {
+        return route;
     }
 
-    public void setV_id(int v_id) {
-        this.v_id = v_id;
+    public void setRoute(String route) {
+        this.route = route;
     }
 
-    public String getDriver_nm() {
-        return driver_nm;
+    public String getDrivername() {
+        return drivername;
     }
 
-    public void setDriver_nm(String driver_nm) {
-        this.driver_nm = driver_nm;
+    public void setDrivername(String drivername) {
+        this.drivername = drivername;
     }
 
-    public String getDriver_mob() {
-        return driver_mob;
+    public String getDriverno() {
+        return driverno;
     }
 
-    public void setDriver_mob(String driver_mob) {
-        this.driver_mob = driver_mob;
+    public void setDriverno(String driverno) {
+        this.driverno = driverno;
     }
 
-    public String getVehicle_no() {
-        return vehicle_no;
+    public String getVehicleno() {
+        return vehicleno;
     }
 
-    public void setVehicle_no(String vehicle_no) {
-        this.vehicle_no = vehicle_no;
+    public void setVehicleno(String vehicleno) {
+        this.vehicleno = vehicleno;
     }
 
-    public String getVehicle_imgpath() {
-        return vehicle_imgpath;
+    public String getDt() {
+        return dt;
     }
 
-    public void setVehicle_imgpath(String vehicle_imgpath) {
-        this.vehicle_imgpath = vehicle_imgpath;
+    public void setDt(String dt) {
+        this.dt = dt;
     }
 
-    String driver_mob;
-    String vehicle_no;
-    String vehicle_imgpath;
-
+    int t_id;
+    String route,drivername,driverno,vehicleno,dt;
 }

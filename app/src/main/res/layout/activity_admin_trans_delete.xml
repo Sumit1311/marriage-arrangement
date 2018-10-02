@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FD7165"
+    android:layout_height="match_parent"
+    tools:context=".activity_admin_trans_delete">
+
+    <LinearLayout
+        android:background="@drawable/shape_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="30dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Delete Transport Details"
+            android:textColor="#FF1100"
+            android:textSize="28dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/txt_admin_tid_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="20"
+                android:inputType="number"
+                android:hint="Enter T_Id for Delete"
+                android:text="" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/btn_delete_trans"
+            android:text="Delete Transport Details"
+            android:textSize="14dp"
+            android:background="@drawable/shape_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</ScrollView>

@@ -2,7 +2,6 @@ package com.example.home.model;
 
 public class menu_details {
    int m_id;
-   String menu_type;
 
     public int getM_id() {
         return m_id;
@@ -36,15 +35,5 @@ public class menu_details {
         this.menu_dt = menu_dt;
     }
 
-    public String getMenu_img() {
-        return menu_img;
-    }
-
-    public void setMenu_img(String menu_img) {
-        this.menu_img = menu_img;
-    }
-
-    String menu_time;
-    String menu_dt;
-    String menu_img;
+    String menu_type,menu_time,menu_dt;
 }

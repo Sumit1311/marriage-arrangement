@@ -17,21 +17,18 @@ public class activity_admin_menu_edit extends AppCompatActivity {
     Spinner sp2,sp3;
     Button btn1;
     EditText et1,et2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_menu_edit);
-
-
         btn1=(Button)findViewById(R.id.btn_edit_menu);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //sp1=(Spinner)findViewById(R.id.spin_admin_mid_edit);
                 et2=(EditText)findViewById(R.id.txt_admin_mid_edit);
                 String mid=et2.getText().toString();
                 Integer i1=Integer.parseInt(mid);
-
 
                 sp2=(Spinner)findViewById(R.id.spin_admin_mtype_edit);
                 String mtype=sp2.getSelectedItem().toString();
@@ -44,7 +41,6 @@ public class activity_admin_menu_edit extends AppCompatActivity {
 
                 RestAdapter ra = new RestAdapter.Builder().setEndpoint(Api.url).build();
                 Api api = ra.create(Api.class);
-
                 api.editmenu(i1, mtype, mtime, mdt, new Callback<Response>() {
                     @Override
                     public void success(Response response, retrofit.client.Response response2) {
@@ -56,7 +52,6 @@ public class activity_admin_menu_edit extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
                     }
                 });
-
             }
         });
     }

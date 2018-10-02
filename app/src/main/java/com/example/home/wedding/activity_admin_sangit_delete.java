@@ -20,7 +20,6 @@ public class activity_admin_sangit_delete extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_sangit_delete);
-
         btn=(Button)findViewById(R.id.btn_delete_sangit);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,7 +33,7 @@ public class activity_admin_sangit_delete extends AppCompatActivity {
                 api.deletesangit(venue, new Callback<Response>() {
                     @Override
                     public void success(Response response, retrofit.client.Response response2) {
-                        Toast.makeText(getApplicationContext(),"OK",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"Successfully Deleted", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
@@ -44,8 +43,5 @@ public class activity_admin_sangit_delete extends AppCompatActivity {
                 });
             }
         });
-
-
-
     }
 }

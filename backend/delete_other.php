@@ -2,7 +2,7 @@
 	 $host = "localhost";
 	 $user = "root";
  	 $password = "";
- 	 $database = "weddingdb";
+ 	 $database = "wedding";
 	
 	$con=mysqli_connect($host,$user,$password);
 	mysqli_select_db($con,$database) or die("Error in selecting the database:".mysql_error());

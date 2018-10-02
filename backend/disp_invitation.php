@@ -1,26 +1,26 @@
 <?php 
-define('UPLOAD_PATH', '/uploads_invitation/');
+//define('UPLOAD_PATH', '/uploads_invitation/');
 	 $host = "localhost";
 	 $user = "root";
  	 $password = "";
- 	 $database = "weddingdb";
+ 	 $database = "wedding";
 	$con=new mysqli($host,$user,$password,$database);	
 	if($con->connect_error)
 	{
 		die("connection failed". $con->connect_error);
 	}
-	$invitation_array=array();
-	$sql="select pageno,invitation_path from tbl_invitation;";
+	$contact_array=array();
+	$sql="select contactname from tbl_contact;";
 	$statement=$con->prepare($sql);
 	$statement->execute();
-	$statement->bind_result($pageno,$invitation_path);
+	$statement->bind_result($contactname);
 	while($statement->fetch())
 	{
-	$absurl = 'http://' . gethostbyname(gethostname()) .':81'. '/wedding' . UPLOAD_PATH . $invitation_path;	
+	//$absurl = 'http://' . gethostbyname(gethostname()) .':81'. '/wedding' . UPLOAD_PATH . $imgpath;	
 
 
-	$temp=['pageno'=>$pageno,'invitation_path'=>$absurl];
-	array_push($invitation_array,$temp);
+	$temp=['contactname'=>$contactname];
+	array_push($contact_array,$temp);
 	}			
-	echo json_encode($invitation_array);
+	echo json_encode($contact_array);
 ?>	  

@@ -2,15 +2,16 @@
 	 $host = "localhost";
 	 $user = "root";
  	 $password = "";
- 	 $database = "weddingdb";
+ 	 $database = "wedding";
 	
-	$con=mysql_connect($host,$user,$password) 
-	or die("Could not connect: ".mysql_error());
-	mysql_select_db($database) 
-	or die("Error in selecting the database:".mysql_error());
+	$con=mysqli_connect($host,$user,$password);
+	mysqli_select_db($con,$database) or die("Error in selecting the database:".mysql_error());
+	
 	$vidhiname=$_POST['vidhiname'];
 	$venue=$_POST['venue'];
-	$des=$_POST['des'];
+	$description=$_POST['description'];
+	$poc=$_POST['poc'];
+
+	$r=mysqli_query($con,"update tbl_other set venue='$venue',poc='$poc',description='$description' where vidhiname='$vidhiname'");	
 	
-	$r=mysqli_query($con,"update tbl_other set venue='$venue',des='$des' where vidhiname='$vidhiname'");
-	?>	  
+?>	  

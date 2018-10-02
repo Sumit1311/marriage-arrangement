@@ -72,24 +72,26 @@ public class Navigation_drawer_guest extends Fragment {
         ll31.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i1=new Intent(getActivity().getApplicationContext(),activity_disp_menu_list.class);
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_menu_view.class);
                 startActivity(i1);
             }
         });
-        LinearLayout ll32=(LinearLayout)v.findViewById(R.id.llguestsangit);
-        ll32.setOnClickListener(new View.OnClickListener() {
+
+        LinearLayout ll33=(LinearLayout)v.findViewById(R.id.llguestothers);
+        ll33.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i1=new Intent(getActivity().getApplicationContext(),activity_guest_disp_sangit.class);
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_other_view.class);
                 startActivity(i1);
             }
         });
+
         LinearLayout ll4=(LinearLayout)v.findViewById(R.id.llguest_transport);
         ll4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //           Intent i1=new Intent(getActivity().getApplicationContext(),activity_disp_menu_list.class);
-                Intent i1=new Intent(getActivity().getApplicationContext(),activity_disp_transport_list1.class);
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_trans_view.class);
                 startActivity(i1);
                 getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
@@ -114,7 +116,14 @@ public class Navigation_drawer_guest extends Fragment {
                 }
             }
         });
-
+        LinearLayout ll6=(LinearLayout)v.findViewById(R.id.llguestroom);
+        ll6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_guest_room_view.class);
+                startActivity(i1);
+            }
+        });
         return v;
     }
 

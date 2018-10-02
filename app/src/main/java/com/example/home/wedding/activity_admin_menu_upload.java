@@ -45,7 +45,7 @@ public class activity_admin_menu_upload extends AppCompatActivity {
 
                     @Override
                     public void failure(RetrofitError error) {
-                        Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
+Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
                     }
                 });
 

@@ -33,7 +33,7 @@ public class activity_disp_transport_list2 extends AppCompatActivity {
         Api_disp api=rf.create(Api_disp.class);
         Call<List<transport>> call=api.gettransportdetails();
 
-        call.enqueue(new Callback<List<transport>>() {
+        /*call.enqueue(new Callback<List<transport>>() {
             @Override
             public void onResponse(Call<List<transport>> call, Response<List<transport>> response) {
                 List<transport> slist=response.body();
@@ -79,6 +79,6 @@ public class activity_disp_transport_list2 extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),t.toString(),Toast.LENGTH_LONG).show();
             }
         });
-
+*/
     }
 }

@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.home.model.transport;
@@ -20,33 +21,37 @@ public class transport_adapter extends RecyclerView.Adapter<transport_adapter.Vi
 {
     Context context;
     ArrayList<transport> al;
-    customclicklistener cl;
+    //customclicklistener cl;
 
-    public transport_adapter(Context context, ArrayList<transport> al, customclicklistener cl)
+    public transport_adapter(Context context, ArrayList<transport> al)
     {
         this.context=context;
         this.al=al;
-        this.cl=cl;
+      //  this.cl=cl;
     }
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View v= LayoutInflater.from(context).inflate(R.layout.row_guest_transport,viewGroup,false);
-        final transport_adapter.ViewHolder vh=new transport_adapter.ViewHolder(v);
-        v.setOnClickListener(new View.OnClickListener() {
+    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+        View v= LayoutInflater.from(context).inflate(R.layout.row_trans_details,viewGroup,false);
+        final ViewHolder vh=new ViewHolder(v);
+        /*v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 cl.itemclick(v,vh.getAdapterPosition());
             }
-        });
+        });*/
         return vh;
     }
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
-        viewHolder.tv1.setText(al.get(i).getDriver_nm());
-        viewHolder.tv2.setText(al.get(i).getDriver_mob());
-        viewHolder.tv3.setText(al.get(i).getVehicle_no());
-        Picasso.with(context).load(al.get(i).getVehicle_imgpath()).resize(220,220).into(viewHolder.iv1);
+        viewHolder.tv1.setText(""+al.get(i).getT_id());
+        viewHolder.tv2.setText(al.get(i).getDt());
+        viewHolder.tv3.setText(al.get(i).getRoute());
+        viewHolder.tv4.setText(al.get(i).getDrivername());
+        viewHolder.tv5.setText(al.get(i).getDriverno());
+        viewHolder.tv6.setText(al.get(i).getVehicleno());
+        viewHolder.rel.setBackgroundResource(R.drawable.car);
+        viewHolder.rel.getBackground().setAlpha(70);
     }
 
     @Override
@@ -55,14 +60,17 @@ public class transport_adapter extends RecyclerView.Adapter<transport_adapter.Vi
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tv1,tv2,tv3;
-        ImageView iv1;
+        TextView tv1,tv2,tv3,tv4,tv5,tv6;
+        RelativeLayout rel;
         public ViewHolder(View itemView) {
             super(itemView);
-            tv1=(TextView)itemView.findViewById(R.id.txt_disp_guest_transport_drivername);
-            tv2=(TextView)itemView.findViewById(R.id.txt_disp_guest_transport_driverno);
-            tv3=(TextView)itemView.findViewById(R.id.txt_disp_guest_transport_vehicleno);
-            iv1=(ImageView)itemView.findViewById(R.id.img_disp_guest_transport);
+            tv1=(TextView)itemView.findViewById(R.id.txt_admin_row_transid);
+            tv2=(TextView)itemView.findViewById(R.id.txt_admin_row_transdt);
+            tv3=(TextView)itemView.findViewById(R.id.txt_admin_row_transroute);
+            tv4=(TextView)itemView.findViewById(R.id.txt_admin_row_transdrivername);
+            tv5=(TextView)itemView.findViewById(R.id.txt_admin_row_transdriverno);
+            tv6=(TextView)itemView.findViewById(R.id.txt_admin_row_transvehicleno);
+            rel=(RelativeLayout)itemView.findViewById(R.id.relrowtransport);
         }
     }
 }

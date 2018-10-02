@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activity_guest_room_view">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textColor="#FF1100"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:text="Select Room Number"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spin_guest_room"
+        android:entries="@array/roomno">
+    </Spinner>
+    <Button
+        android:textColor="#FF1100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click to View Guest Details"
+        android:id="@+id/btnguest_roomview"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler_guest_room_view">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

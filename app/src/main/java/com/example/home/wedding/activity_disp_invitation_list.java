@@ -35,7 +35,7 @@ public class activity_disp_invitation_list extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<invitation>> call, Response<List<invitation>> response) {
                 final List<invitation> slist=response.body();
-                Toast.makeText(getApplicationContext(),slist.get(0).getImgpath(),Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),slist.get(0).getInvitation_path(),Toast.LENGTH_LONG).show();
                 RecyclerView rv=(RecyclerView)findViewById(R.id.recycler_disp_invitation);
                 RecyclerView.LayoutManager lm=new LinearLayoutManager(getApplicationContext());
                 rv.setHasFixedSize(true);

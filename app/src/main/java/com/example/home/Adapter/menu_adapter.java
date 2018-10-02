@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,12 +26,12 @@ public class menu_adapter extends RecyclerView.Adapter<menu_adapter.ViewHolder> 
     ArrayList<menu_details> al;
     Context context;
     customclicklistener cl;
-    public menu_adapter(Context context,ArrayList<menu_details> al,customclicklistener cl)
+    public menu_adapter(Context context,ArrayList<menu_details> al)
     {
        // Toast.makeText(context,al.get(0).getMenu_img_path()+"",Toast.LENGTH_LONG).show();
         this.context=context;
         this.al=al;
-        this.cl=cl;
+        //this.cl=cl;
     }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
@@ -43,10 +44,12 @@ public class menu_adapter extends RecyclerView.Adapter<menu_adapter.ViewHolder> 
     @Override
     public void onBindViewHolder(final ViewHolder viewHolder, int i) {
         viewHolder.tv1.setText(""+al.get(i).getM_id());
-        viewHolder.tv2.setText(al.get(i).getMenu_type());
-        viewHolder.tv3.setText(al.get(i).getMenu_time());
-        viewHolder.tv4.setText(al.get(i).getMenu_dt());
-        Picasso.with(context).load(al.get(i).getMenu_img()).into(new Target() {
+        viewHolder.tv2.setText(al.get(i).getMenu_dt());
+        viewHolder.tv3.setText(al.get(i).getMenu_type());
+        viewHolder.tv4.setText(al.get(i).getMenu_time());
+        viewHolder.rel1.setBackgroundResource(R.mipmap.img5);
+        viewHolder.rel1.getBackground().setAlpha(70);
+        /*Picasso.with(context).load(al.get(i).getMenu_img()).into(new Target() {
             @Override
             public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
                 viewHolder.ll1.setBackgroundDrawable(new BitmapDrawable(context.getResources(),bitmap));
@@ -62,7 +65,7 @@ public class menu_adapter extends RecyclerView.Adapter<menu_adapter.ViewHolder> 
             public void onPrepareLoad(Drawable placeHolderDrawable) {
 
             }
-        });
+        });*/
     }
 
     @Override
@@ -72,14 +75,16 @@ public class menu_adapter extends RecyclerView.Adapter<menu_adapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tv1,tv2,tv3,tv4;
+        RelativeLayout rel1;
         LinearLayout ll1;
         public ViewHolder(View itemView) {
             super(itemView);
-            tv1=(TextView)itemView.findViewById(R.id.txt_row_mid);
-            tv2=(TextView)itemView.findViewById(R.id.txt_row_mtype);
-            tv3=(TextView)itemView.findViewById(R.id.txt_row_mtime);
-            tv4=(TextView)itemView.findViewById(R.id.txt_row_mdt);
-            ll1=(LinearLayout)itemView.findViewById(R.id.llmenumain);
+            tv1=(TextView)itemView.findViewById(R.id.txt_row_menuid);
+            tv2=(TextView)itemView.findViewById(R.id.txt_row_menudt);
+            tv3=(TextView)itemView.findViewById(R.id.txt_row_menutype);
+            tv4=(TextView)itemView.findViewById(R.id.txt_row_menutime);
+            rel1=(RelativeLayout)itemView.findViewById(R.id.relrowmenu);
+            //ll1=(LinearLayout)itemView.findViewById(R.id.llmenumain);
         }
     }
 }

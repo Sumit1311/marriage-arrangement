@@ -16,12 +16,10 @@ public class activity_admin_other_delete extends AppCompatActivity {
     EditText et1,et2;
     Button btn;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_other_delete);
-
         btn=(Button)findViewById(R.id.btn_delete_otherdata);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,16 +27,12 @@ public class activity_admin_other_delete extends AppCompatActivity {
                 et1=(EditText)findViewById(R.id.txt_admin_other_vidhiname_delete);
                 String vidhiname=et1.getText().toString();
 
-
-
                 RestAdapter ra = new RestAdapter.Builder().setEndpoint(Api.url).build();
                 Api api = ra.create(Api.class);
-
-                api.deleteother(vidhiname ,new Callback<Response>() {
+                api.deleteother(vidhiname, new Callback<Response>() {
                     @Override
                     public void success(Response response, retrofit.client.Response response2) {
-                        Toast.makeText(getApplicationContext(),"Successfully Deleted",Toast.LENGTH_LONG).show();
-
+                        Toast.makeText(getApplicationContext(),"Record Successfully Deleted",Toast.LENGTH_LONG).show();
                     }
 
                     @Override
@@ -46,6 +40,7 @@ public class activity_admin_other_delete extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
                     }
                 });
+
             }
         });
     }

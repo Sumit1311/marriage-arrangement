@@ -13,12 +13,11 @@ import retrofit.RetrofitError;
 import retrofit2.Response;
 
 public class activity_admin_menu_delete extends AppCompatActivity {
-EditText et2;
+    EditText et2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_menu_delete);
-
         Button b1=(Button)findViewById(R.id.btn_delete_menu);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,7 +31,7 @@ EditText et2;
                 api.deletemenu(i1, new Callback<Response>() {
                     @Override
                     public void success(Response response, retrofit.client.Response response2) {
-                        Toast.makeText(getApplicationContext(),"OK",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"Menu Details Successfully Deleted",Toast.LENGTH_LONG).show();
                     }
 
                     @Override
