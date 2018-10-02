@@ -460,33 +460,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:id="@+id/lladminparticipantedit"
-                    android:padding="10dp">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_centerVertical="true"
-                        android:layout_marginRight="16dp"
-                        android:src="@drawable/edit" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center_vertical"
-                        android:text="Edit Participants Details"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="#666" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:visibility="gone"
-                    android:layout_marginLeft="30dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:id="@+id/lladminparticipantdelete"
                     android:padding="10dp">
 

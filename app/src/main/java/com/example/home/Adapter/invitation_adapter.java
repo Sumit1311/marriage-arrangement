@@ -41,7 +41,7 @@ public class invitation_adapter extends RecyclerView.Adapter<invitation_adapter.
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
         viewHolder.tv1.setText(al.get(i).getPageno());
-        Picasso.with(context).load(al.get(i).getInvitation_path()).resize(220,220).into(viewHolder.iv);
+        Picasso.with(context).load(al.get(i).getImgpath()).resize(220,220).into(viewHolder.iv);
     }
 
     @Override

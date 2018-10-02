@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".vidhi_arranger">
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:id="@+id/btn_vidhi_add"
+        android:text="Add Vidhi Detais"
+        android:textSize="20dp"
+        android:background="@drawable/shape_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:id="@+id/btn_edit_vidhi"
+        android:text="Edit Vidhi Details"
+        android:textSize="20dp"
+        android:background="@drawable/shape_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:id="@+id/btn_view_vidhi"
+        android:text="View Vidhi Details"
+        android:textSize="20dp"
+        android:background="@drawable/shape_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>

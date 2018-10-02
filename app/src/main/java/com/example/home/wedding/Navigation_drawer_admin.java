@@ -23,6 +23,24 @@ public class Navigation_drawer_admin extends Fragment {
             }
         });
 
+        LinearLayout ll11=(LinearLayout)v1.findViewById(R.id.lladmininviupload);
+        ll11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_upload_invitation.class);
+                startActivity(i1);
+            }
+        });
+        LinearLayout ll12=(LinearLayout)v1.findViewById(R.id.lladmininvidelete);
+        ll12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_invitation_delete.class);
+                startActivity(i1);
+
+            }
+        });
+
         LinearLayout ll2=(LinearLayout)v1.findViewById(R.id.lladminmenu);
         ll2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,12 +133,37 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 LinearLayout lladminupload=(LinearLayout)v1.findViewById(R.id.lladminparticipantupload);
                 lladminupload.setVisibility(View.VISIBLE);
-                LinearLayout lladminedit=(LinearLayout)v1.findViewById(R.id.lladminparticipantedit);
-                lladminedit.setVisibility(View.VISIBLE);
                 LinearLayout lladmindelete=(LinearLayout)v1.findViewById(R.id.lladminparticipantdelete);
                 lladmindelete.setVisibility(View.VISIBLE);
                 LinearLayout lladminview=(LinearLayout)v1.findViewById(R.id.lladminparticipantview);
                 lladminview.setVisibility(View.VISIBLE);
+            }
+        });
+
+        LinearLayout ll41=(LinearLayout)v1.findViewById(R.id.lladminparticipantupload);
+        ll41.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1 = new Intent(getActivity().getApplicationContext(), activity_admin_participants_upload.class);
+                startActivity(i1);
+            }
+        });
+        LinearLayout ll43=(LinearLayout)v1.findViewById(R.id.lladminparticipantdelete);
+        ll43.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_participants_delete.class);
+                startActivity(i1);
+
+            }
+        });
+        LinearLayout ll44=(LinearLayout)v1.findViewById(R.id.lladminparticipantview);
+        ll44.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_participants_view.class);
+                startActivity(i1);
+
             }
         });
 
@@ -145,6 +188,34 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_other_upload.class);
                 startActivity(i1);
+
+            }
+        });
+        LinearLayout ll52=(LinearLayout)v1.findViewById(R.id.lladminothersedit);
+        ll52.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_other_edit.class);
+                startActivity(i1);
+
+            }
+        });
+        LinearLayout ll53=(LinearLayout)v1.findViewById(R.id.lladminothersdelete);
+        ll53.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_other_delete.class);
+                startActivity(i1);
+
+            }
+        });
+        LinearLayout ll54=(LinearLayout)v1.findViewById(R.id.lladminothersview);
+        ll54.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_other_view.class);
+                startActivity(i1);
+
             }
         });
 
@@ -162,14 +233,44 @@ public class Navigation_drawer_admin extends Fragment {
                 lladminview.setVisibility(View.VISIBLE);
             }
         });
+
         LinearLayout ll61=(LinearLayout)v1.findViewById(R.id.lladmintransportupload);
         ll61.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_transport_upload.class);
                 startActivity(i1);
+
             }
         });
+        LinearLayout ll62=(LinearLayout)v1.findViewById(R.id.lladmintransportedit);
+        ll62.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_transport_edit.class);
+                startActivity(i1);
+
+            }
+        });
+        LinearLayout ll63=(LinearLayout)v1.findViewById(R.id.lladmintransportdelete);
+        ll63.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_transport_delete.class);
+                startActivity(i1);
+
+            }
+        });
+        LinearLayout ll64=(LinearLayout)v1.findViewById(R.id.lladmintransportview);
+        ll64.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_transport_view.class);
+                startActivity(i1);
+
+            }
+        });
+
 
         LinearLayout ll7=(LinearLayout)v1.findViewById(R.id.lladminroomdetails);
         ll7.setOnClickListener(new View.OnClickListener() {

@@ -3,9 +3,11 @@
     package="com.example.home.wedding">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -33,7 +35,6 @@
             android:name=".activity_disp_invitation_list"
             android:parentActivityName=".guest_main" />
         <activity android:name=".activity_dispfullimg_guest" />
-
         <activity
             android:name=".activity_disp_transport_list1"
             android:parentActivityName=".guest_main" />
@@ -59,9 +60,47 @@
         <activity
             android:name=".activity_admin_sangit_view"
             android:parentActivityName=".admin_main" />
-        <activity android:name=".activity_guest_disp_sangit"></activity>
-        <activity android:name=".activity_admin_other_upload" android:parentActivityName=".admin_main"/>
-        <activity android:name=".activity_admin_transport_upload" android:parentActivityName=".admin_main"/>
+        <activity android:name=".activity_guest_disp_sangit" />
+        <activity
+            android:name=".activity_admin_other_upload"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_transport_upload"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_transport_delete"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_other_delete"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_upload_invitation"
+            android:parentActivityName=".admin_main" />
+        <activity android:name=".arranger_login" />
+        <activity android:name=".arranger_menu" />
+        <activity android:name=".Transport_arranger" />
+        <activity
+            android:name=".activity_admin_other_edit"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_other_view"
+            android:parentActivityName=".admin_main" />
+        <activity android:name=".vidhi_arranger" />
+        <activity android:name=".sangit_arranger" />
+        <activity
+            android:name=".activity_admin_transport_edit"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_participants_upload"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_participants_view"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_participants_delete"
+            android:parentActivityName=".admin_main" />
+        <activity android:name=".activity_admin_invitation_delete" android:parentActivityName=".admin_main"></activity>
+
     </application>
 
 </manifest>

@@ -36,14 +36,7 @@ public interface Api {
                     @Field("vidhiname") String vidhiname,
                     Callback<Response> callback);
 
-    @FormUrlEncoded
-    @POST("/insert_participants.php")
-    public void insertparticipants
-            (
-                    @Field("partname") String partname,
-                    @Field("partno") String partno,
-                    @Field("parttype") String parttype,
-                    Callback<Response> callback);
+
 
     @FormUrlEncoded
     @POST("/insert_transport.php")
@@ -74,7 +67,7 @@ public interface Api {
             (
                     @Field("vidhiname") String vidhiname,
                     @Field("venue") String venue,
-                    @Field("des") String des,
+                    @Field("description") String description,
                     Callback<Response> callback);
 
     @FormUrlEncoded
@@ -94,5 +87,57 @@ public interface Api {
             (
                 @Field("mid") int mid,
                 Callback<Response> callback
+            );
+
+    @FormUrlEncoded
+    @POST("/delete_invitation.php")
+    public void deleteinvite
+            (
+                    @Field("pageno") String pageno,
+                    Callback<Response> callback
+            );
+
+    @FormUrlEncoded
+    @POST("/delete_participants.php")
+    public void deleteparticipants
+            (
+                    @Field("partname") String partname,
+                    Callback<Response> callback
+            );
+
+    @FormUrlEncoded
+    @POST("/delete_transport.php")
+    public void deletetransport
+            (
+                    @Field("vehicleno") String vehicleno,
+
+                    Callback<Response> callback
+            );
+
+    @FormUrlEncoded
+    @POST("/delete_other.php")
+    public void deleteother
+            (
+                    @Field("vidhiname") String vidhiname,
+                    Callback<Response> callback
+            );
+
+    @FormUrlEncoded
+    @POST("/insert_participants.php")
+    public void insertparticipants
+            (
+                    @Field("partname") String partname,
+                    @Field("partno") String partno,
+                    @Field("parttype") String parttype,
+                    Callback<Response> callback
+            );
+
+    @FormUrlEncoded
+    @POST("/delete_sangit.php")
+    public void deletesangit
+            (
+                    @Field("venue") String venue,
+
+                    Callback<Response> callback
             );
 }
