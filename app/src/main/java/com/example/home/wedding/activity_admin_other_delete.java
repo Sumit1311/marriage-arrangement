@@ -25,22 +25,26 @@ public class activity_admin_other_delete extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 et1=(EditText)findViewById(R.id.txt_admin_other_vidhiname_delete);
-                String vidhiname=et1.getText().toString();
+                if(et1.getText().toString().equals(""))
+                {
+                    et1.setError("Enter Value");
+                }
+                else {
+                    String vidhiname = et1.getText().toString();
+                    RestAdapter ra = new RestAdapter.Builder().setEndpoint(Api.url).build();
+                    Api api = ra.create(Api.class);
+                    api.deleteother(vidhiname, new Callback<Response>() {
+                        @Override
+                        public void success(Response response, retrofit.client.Response response2) {
+                            Toast.makeText(getApplicationContext(), "Record Successfully Deleted", Toast.LENGTH_LONG).show();
+                        }
 
-                RestAdapter ra = new RestAdapter.Builder().setEndpoint(Api.url).build();
-                Api api = ra.create(Api.class);
-                api.deleteother(vidhiname, new Callback<Response>() {
-                    @Override
-                    public void success(Response response, retrofit.client.Response response2) {
-                        Toast.makeText(getApplicationContext(),"Record Successfully Deleted",Toast.LENGTH_LONG).show();
-                    }
-
-                    @Override
-                    public void failure(RetrofitError error) {
-                        Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
-                    }
-                });
-
+                        @Override
+                        public void failure(RetrofitError error) {
+                            Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
             }
         });
     }

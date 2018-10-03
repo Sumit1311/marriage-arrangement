@@ -27,23 +27,28 @@ public class activity_admin_trans_delete extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 et1=(EditText)findViewById(R.id.txt_admin_tid_delete);
-                String tid=et1.getText().toString();
-                Integer i1=Integer.parseInt(tid);
+                if (et1.getText().toString().equals(""))
+                {
+                    et1.setError("Enter Value");
+                }
+                else {
+                    String tid = et1.getText().toString();
+                    Integer i1 = Integer.parseInt(tid);
 
-                RestAdapter ra = new RestAdapter.Builder().setEndpoint(Api.url).build();
-                Api api = ra.create(Api.class);
-                api.deletetransport(i1, new Callback<Response>() {
-                    @Override
-                    public void success(Response response, retrofit.client.Response response2) {
-                        Toast.makeText(getApplicationContext(),"Record Successfully Deleted", Toast.LENGTH_LONG).show();
-                    }
+                    RestAdapter ra = new RestAdapter.Builder().setEndpoint(Api.url).build();
+                    Api api = ra.create(Api.class);
+                    api.deletetransport(i1, new Callback<Response>() {
+                        @Override
+                        public void success(Response response, retrofit.client.Response response2) {
+                            Toast.makeText(getApplicationContext(), "Record Successfully Deleted", Toast.LENGTH_LONG).show();
+                        }
 
-                    @Override
-                    public void failure(RetrofitError error) {
-                        Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
-                    }
-                });
-
+                        @Override
+                        public void failure(RetrofitError error) {
+                            Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
             }
         });
     }

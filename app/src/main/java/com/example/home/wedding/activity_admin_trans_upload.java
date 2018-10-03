@@ -26,36 +26,44 @@ public class activity_admin_trans_upload extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sp1=(Spinner)findViewById(R.id.spin_admin_transport_route_upload);
-                String route=sp1.getSelectedItem().toString();
-
-                sp2=(Spinner)findViewById(R.id.spin_admin_transport_date_upload);
-                String dt=sp2.getSelectedItem().toString();
-
                 et1=(EditText)findViewById(R.id.txt_admin_trans_drivername_upload);
-                String drivername=et1.getText().toString();
-
-
                 et2=(EditText)findViewById(R.id.txt_admin_other_driverno_upload);
-                String driverno=et2.getText().toString();
-                //Integer i1=Integer.parseInt(driverno);
-
                 et3=(EditText)findViewById(R.id.txt_admin_vehicleno_upload);
-                String vehicleno=et3.getText().toString();
+                if(et1.getText().toString().equals(""))
+                {
+                    et1.setError("Enter Value");
+                }
+                else if(et2.getText().toString().equals(""))
+                {
+                    et2.setError("Enter Value");
+                }
+                else if(et3.getText().toString().equals(""))
+                {
+                    et3.setError("Enter Value");
+                }
+                else {
+                    sp1 = (Spinner) findViewById(R.id.spin_admin_transport_route_upload);
+                    String route = sp1.getSelectedItem().toString();
+                    sp2 = (Spinner) findViewById(R.id.spin_admin_transport_date_upload);
+                    String dt = sp2.getSelectedItem().toString();
+                    String drivername = et1.getText().toString();
+                    String driverno = et2.getText().toString();
+                    String vehicleno = et3.getText().toString();
 
-                RestAdapter ra = new RestAdapter.Builder().setEndpoint(Api.url).build();
-                Api api = ra.create(Api.class);
-                api.inserttransport(route, drivername, driverno, vehicleno, dt, new Callback<Response>() {
-                    @Override
-                    public void success(Response response, retrofit.client.Response response2) {
-                        Toast.makeText(getApplicationContext(),"Record Successfully Uploaded", Toast.LENGTH_LONG).show();
-                    }
+                    RestAdapter ra = new RestAdapter.Builder().setEndpoint(Api.url).build();
+                    Api api = ra.create(Api.class);
+                    api.inserttransport(route, drivername, driverno, vehicleno, dt, new Callback<Response>() {
+                        @Override
+                        public void success(Response response, retrofit.client.Response response2) {
+                            Toast.makeText(getApplicationContext(), "Record Successfully Uploaded", Toast.LENGTH_LONG).show();
+                        }
 
-                    @Override
-                    public void failure(RetrofitError error) {
-                        Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
-                    }
-                });
+                        @Override
+                        public void failure(RetrofitError error) {
+                            Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
             }
         });
     }

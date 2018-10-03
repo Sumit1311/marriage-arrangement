@@ -32,14 +32,9 @@ public class Navigation_drawer_guest extends Fragment {
         ll1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity().getApplicationContext(),"Home",Toast.LENGTH_LONG).show();
-                /*Fragment fg=new frag_upload_invitation();
-                FragmentTransaction ft=getFragmentManager().beginTransaction();
-                ft.replace(R.id.frmguest,fg);
-                ft.commit();*/
+               // Toast.makeText(getActivity().getApplicationContext(),"Home",Toast.LENGTH_LONG).show();
 
-                Intent i1=new Intent(getActivity().getApplicationContext(), Login_activity.class);
-
+                Intent i1=new Intent(getActivity().getApplicationContext(), guest_main.class);
                 startActivity(i1);
                 getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
@@ -74,15 +69,25 @@ public class Navigation_drawer_guest extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_menu_view.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
-
+        LinearLayout ll32=(LinearLayout)v.findViewById(R.id.llguestsangit);
+        ll32.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_view_sangitrajani.class);
+                startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
+            }
+        });
         LinearLayout ll33=(LinearLayout)v.findViewById(R.id.llguestothers);
         ll33.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_other_view.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
 
@@ -122,6 +127,17 @@ public class Navigation_drawer_guest extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_guest_room_view.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
+            }
+        });
+
+        LinearLayout ll7=(LinearLayout)v.findViewById(R.id.llguestcontactus);
+        ll7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_contact_us.class);
+                startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
         return v;

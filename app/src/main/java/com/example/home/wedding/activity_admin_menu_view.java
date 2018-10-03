@@ -31,7 +31,7 @@ public class activity_admin_menu_view extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<menu_details>> call, Response<List<menu_details>> response) {
                 List<menu_details> slist=response.body();
-                Toast.makeText(getApplicationContext(),slist.size()+"",Toast.LENGTH_LONG).show();
+
                 al=new ArrayList<>();
                 RecyclerView rv=(RecyclerView)findViewById(R.id.recycler_admin_menudisp);
                 RecyclerView.LayoutManager lm=new LinearLayoutManager(getApplicationContext());
@@ -44,7 +44,6 @@ public class activity_admin_menu_view extends AppCompatActivity {
                     md1.setMenu_type(slist.get(i).getMenu_type());
                     md1.setMenu_time(slist.get(i).getMenu_time());
                     md1.setMenu_dt(slist.get(i).getMenu_dt());
-                    //              md1.setMenu_img(slist.get(i).getMenu_img());
                     al.add(md1);
                 }
                 menu_adapter ma=new menu_adapter(getApplicationContext(),al);

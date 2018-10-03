@@ -8,6 +8,7 @@ import com.example.home.model.participants;
 import com.example.home.model.room;
 import com.example.home.model.sangit;
 import com.example.home.model.transport;
+import com.example.home.model.user;
 
 import java.util.List;
 
@@ -16,6 +17,8 @@ import retrofit2.http.GET;
 
 public interface Api_disp {
     String url = "http://192.168.43.42:81/wedding/";
+    @GET("disp_user.php")
+    Call<List<user>> getuser();
 
     @GET("disp_invitation.php")
     Call<List<invitation>> getinvitation();

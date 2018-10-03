@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:prompt="@string/mtypeheading"
             android:id="@+id/spin_admin_user_add"
-            android:entries="@array/arrangertype">
+            android:entries="@array/arranger">
         </Spinner>
 
 

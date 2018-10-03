@@ -57,7 +57,7 @@ ArrayList<other> al;
                                 al.add(o1);
                             }
                         }
-                        Toast.makeText(getApplicationContext(),al.size()+"",Toast.LENGTH_LONG).show();
+
                         //Toast.makeText(getApplicationContext(),slist.get(0).getVidhiname()+" "+t1,Toast.LENGTH_LONG).show();
                         other_adapter oa=new other_adapter(getApplicationContext(),al);
                         rv.setAdapter(oa);

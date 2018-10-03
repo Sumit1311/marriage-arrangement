@@ -14,7 +14,7 @@
             android:id="@+id/action_bar"
             layout="@layout/action_bar" />
         <include android:id="@+id/details"
-            layout="@layout/activity_login_activity"/>
+            layout="@layout/guest_main_page"/>
     </LinearLayout>
 
     <fragment

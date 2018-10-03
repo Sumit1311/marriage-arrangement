@@ -9,6 +9,24 @@ import retrofit.http.POST;
 public interface Api {
     String url="http://192.168.43.42:81/wedding/";
     @FormUrlEncoded
+    @POST("/insert_user.php")
+    public void insertuser
+            (
+                    @Field("uname") String uname,
+                    @Field("pwd") String pwd,
+                    @Field("arrangertype") String arrangertype,
+                    Callback<Response> callback);
+
+    @FormUrlEncoded
+    @POST("/delete_user.php")
+    public void deleteuser
+            (
+                    @Field("uname") String uname,
+                    Callback<Response> callback
+            );
+
+
+    @FormUrlEncoded
     @POST("/insert_menu.php")
     public void insertmenu
             (
@@ -32,6 +50,14 @@ public interface Api {
     public void deletemenu
             (
                     @Field("mid") int mid,
+                    Callback<Response> callback
+            );
+
+    @FormUrlEncoded
+    @POST("/delete_invitation.php")
+    public void deleteinvitation
+            (
+                    @Field("pageno") String pageno,
                     Callback<Response> callback
             );
 
@@ -125,6 +151,23 @@ public interface Api {
     public void deleteroom
             (
                     @Field("roomno") String roomno,
+                    Callback<Response> callback
+            );
+
+    @FormUrlEncoded
+    @POST("/insert_participants.php")
+    public void insertparticipants
+            (
+                    @Field("partname") String partname,
+                    @Field("partno") String partno,
+                    @Field("parttype") String parttype,
+                    Callback<Response> callback);
+
+    @FormUrlEncoded
+    @POST("/delete_participants.php")
+    public void deleteparticipants
+            (
+                    @Field("partname") String partname,
                     Callback<Response> callback
             );
 

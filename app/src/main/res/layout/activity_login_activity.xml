@@ -56,6 +56,16 @@
                 android:hint="Enter Password"
                 android:text="" />
         </android.support.design.widget.TextInputLayout>
+        <Spinner
+
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:prompt="@string/mtypeheading"
+            android:id="@+id/spin_arranger_type"
+            android:entries="@array/arranger">
+        </Spinner>
+
         <Button
             android:layout_marginTop="30dp"
             android:id="@+id/btn_login"

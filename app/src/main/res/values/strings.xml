@@ -13,6 +13,15 @@
         <item>Lunch</item>
         <item>Dinner</item>
     </string-array>
+    <string-array name="arranger">
+        <item>Admin</item>
+        <item>Menu Arranger</item>
+        <item>Transport Arranger</item>
+        <item>Vidhi Arranger</item>
+        <item>Room Management</item>
+        <item>Sangit Arranger</item>
+    </string-array>
+
     <string-array name="trans">
         <item>Lonar to Sailu</item>
         <item>Sailu to Lonar</item>
@@ -41,13 +50,6 @@
         <item>5</item>
         <item>6</item>
         <item>7</item>
-    </string-array>
-    <string-array name="arrangertype">
-        <item>Menu Arranger</item>
-        <item>Sangit Rajani</item>
-        <item>Vidhi Arranger</item>
-        <item>Transport Arranger</item>
-        <item>Room Arranger</item>
     </string-array>
 
     <string-array name="mdt">

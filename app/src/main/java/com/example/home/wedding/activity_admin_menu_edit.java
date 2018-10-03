@@ -26,32 +26,42 @@ public class activity_admin_menu_edit extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                et2=(EditText)findViewById(R.id.txt_admin_mid_edit);
-                String mid=et2.getText().toString();
-                Integer i1=Integer.parseInt(mid);
-
-                sp2=(Spinner)findViewById(R.id.spin_admin_mtype_edit);
-                String mtype=sp2.getSelectedItem().toString();
-
-                sp3=(Spinner)findViewById(R.id.spin_admin_mdt_edit);
-                String mdt=sp3.getSelectedItem().toString();
-
                 et1=(EditText)findViewById(R.id.txt_admin_mtime_edit);
-                String mtime=et1.getText().toString();
+                et2=(EditText)findViewById(R.id.txt_admin_mid_edit);
+                if(et2.getText().toString().equals(""))
+                {
+                    et2.setError("Enter Value");
+                }
+                else if (et1.getText().toString().equals("")) {
+                    et1.setError("Enter Value");
+                }
+                else {
+                    String mid = et2.getText().toString();
+                    Integer i1 = Integer.parseInt(mid);
 
-                RestAdapter ra = new RestAdapter.Builder().setEndpoint(Api.url).build();
-                Api api = ra.create(Api.class);
-                api.editmenu(i1, mtype, mtime, mdt, new Callback<Response>() {
-                    @Override
-                    public void success(Response response, retrofit.client.Response response2) {
-                        Toast.makeText(getApplicationContext(),"OK",Toast.LENGTH_LONG).show();
-                    }
+                    sp2 = (Spinner) findViewById(R.id.spin_admin_mtype_edit);
+                    String mtype = sp2.getSelectedItem().toString();
 
-                    @Override
-                    public void failure(RetrofitError error) {
-                        Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
-                    }
-                });
+                    sp3 = (Spinner) findViewById(R.id.spin_admin_mdt_edit);
+                    String mdt = sp3.getSelectedItem().toString();
+
+
+                    String mtime = et1.getText().toString();
+
+                    RestAdapter ra = new RestAdapter.Builder().setEndpoint(Api.url).build();
+                    Api api = ra.create(Api.class);
+                    api.editmenu(i1, mtype, mtime, mdt, new Callback<Response>() {
+                        @Override
+                        public void success(Response response, retrofit.client.Response response2) {
+                            Toast.makeText(getApplicationContext(), "OK", Toast.LENGTH_LONG).show();
+                        }
+
+                        @Override
+                        public void failure(RetrofitError error) {
+                            Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
             }
         });
     }

@@ -13,7 +13,7 @@
 	$vehicleno=$_POST['vehicleno'];
 	$dt=$_POST['dt'];
 
-$r=mysqli_query($con,"insert into tbl_transport values(1,'$route','$drivername','$driverno','$vehicleno','$dt')");
+$r=mysqli_query($con,"insert into tbl_transport(route,drivername,driverno,vehicleno,dt) values('$route','$drivername','$driverno','$vehicleno','$dt')");
 	//$r=mysqli_query($con,"insert into tbl_transport values('kk','dd','dd','dd','dd')");
 	
 	

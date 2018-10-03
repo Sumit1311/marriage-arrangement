@@ -11,7 +11,7 @@
 	$menu_type=$_POST['menu_type'];
 	$menu_time=$_POST['menu_time'];
 	$menu_dt=$_POST['menu_dt'];
-	//$r=mysqli_query($con,"insert into tbl_menu values(1,'ddd','dd','ddd')");	
-	$r=mysqli_query($con,"insert into tbl_menu values(1,'$menu_type','$menu_time','$menu_dt')");	
+	//$r=mysqli_query($con,"insert into tbl_menu values('ddd','dd','ddd')");	
+	$r=mysqli_query($con,"insert into tbl_menu(menu_type,menu_time,menu_dt) values('$menu_type','$menu_time','$menu_dt')");	
 	//mysqli_close($con);
 ?>	  

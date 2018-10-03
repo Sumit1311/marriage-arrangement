@@ -3,14 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/shape_layout"
+    android:background="@mipmap/blank"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/users"
         android:paddingBottom="2dp"
+
         android:textSize="20dp"
+        android:layout_marginTop="20dp"
         android:textAllCaps="true"
         android:textColor="#FF0000"
         android:layout_gravity="center"
@@ -31,6 +33,7 @@
             <com.makeramen.roundedimageview.RoundedImageView
                 android:padding="1dp"
                 app:riv_oval="true"
+                android:layout_marginLeft="20dp"
                 android:src="@mipmap/d"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -41,7 +44,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/colorAccent"
                 android:layout_gravity="center"
-                android:text="Admin"/>
+                android:text="Admin/Arranger"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -49,22 +52,7 @@
             android:layout_margin="15dp"
             android:orientation="vertical"
             android:id="@+id/arranger">
-            <com.makeramen.roundedimageview.RoundedImageView
-                android:padding="1dp"
-                app:riv_oval="true"
-                android:src="@mipmap/t"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textColor="@color/colorAccent"
-                android:layout_gravity="center"
-                android:text="Arranger">
 
-            </TextView>
         </LinearLayout>
             <LinearLayout
                 android:layout_margin="15dp"

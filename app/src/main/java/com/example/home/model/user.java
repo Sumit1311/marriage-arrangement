@@ -1,32 +1,29 @@
 package com.example.home.model;
 
 public class user {
-    String userid;
-    String password;
-
-    public String getUserid() {
-        return userid;
+    public String getUname() {
+        return uname;
     }
 
-    public void setUserid(String userid) {
-        this.userid = userid;
+    public void setUname(String uname) {
+        this.uname = uname;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPwd() {
+        return pwd;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
 
-    public String getUsertype() {
-        return usertype;
+    public String getArrangertype() {
+        return arrangertype;
     }
 
-    public void setUsertype(String usertype) {
-        this.usertype = usertype;
+    public void setArrangertype(String arrangertype) {
+        this.arrangertype = arrangertype;
     }
 
-    String usertype;
+    String uname,pwd,arrangertype;
 }

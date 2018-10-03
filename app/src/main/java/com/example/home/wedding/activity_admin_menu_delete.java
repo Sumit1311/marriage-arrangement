@@ -23,22 +23,29 @@ public class activity_admin_menu_delete extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 et2=(EditText)findViewById(R.id.txt_admin_mid_delete);
-                String mid=et2.getText().toString();
-                Integer i1=Integer.parseInt(mid);
+                if(et2.getText().toString().equals(""))
+                {
+                    et2.setError("Enter Value");
+                }
+                else {
 
-                RestAdapter ra = new RestAdapter.Builder().setEndpoint(Api.url).build();
-                Api api = ra.create(Api.class);
-                api.deletemenu(i1, new Callback<Response>() {
-                    @Override
-                    public void success(Response response, retrofit.client.Response response2) {
-                        Toast.makeText(getApplicationContext(),"Menu Details Successfully Deleted",Toast.LENGTH_LONG).show();
-                    }
+                    String mid = et2.getText().toString();
+                    Integer i1 = Integer.parseInt(mid);
 
-                    @Override
-                    public void failure(RetrofitError error) {
-                        Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
-                    }
-                });
+                    RestAdapter ra = new RestAdapter.Builder().setEndpoint(Api.url).build();
+                    Api api = ra.create(Api.class);
+                    api.deletemenu(i1, new Callback<Response>() {
+                        @Override
+                        public void success(Response response, retrofit.client.Response response2) {
+                            Toast.makeText(getApplicationContext(), "Menu Details Successfully Deleted", Toast.LENGTH_LONG).show();
+                        }
+
+                        @Override
+                        public void failure(RetrofitError error) {
+                            Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
             }
         });
     }

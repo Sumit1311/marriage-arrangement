@@ -44,7 +44,6 @@ public class activity_disp_invitation_list extends AppCompatActivity {
                 for(int i=0;i<slist.size();i++)
                 {
                     invitation i1=new invitation();
-
                     i1.setPageno(slist.get(i).getPageno());
                     i1.setImgpath(slist.get(i).getImgpath());
                     al.add(i1);

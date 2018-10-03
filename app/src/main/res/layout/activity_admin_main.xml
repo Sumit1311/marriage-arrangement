@@ -13,7 +13,7 @@
             android:id="@+id/action_bar"
             layout="@layout/action_bar" />
         <include android:id="@+id/details"
-            layout="@layout/activity_login_activity"/>
+            layout="@layout/admin_layout_mainpage"/>
     </LinearLayout>
     <fragment
         android:id="@+id/fragment_navigation_drawer_admin"

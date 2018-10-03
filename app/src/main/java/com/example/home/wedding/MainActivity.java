@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (checkPermission()) {
             //Snackbar.make(ll1, "Permission already granted.", Snackbar.LENGTH_LONG).show();
-            Toast.makeText(getApplicationContext(),"OK",Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(),"OK",Toast.LENGTH_LONG).show();
         } else {
             //Snackbar.make(ll1, "Please request permission.", Snackbar.LENGTH_LONG).show();
             requestPermission();
@@ -81,14 +81,6 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(i_admin);
                     }
                 });
-              /*  arranger=(LinearLayout)myDialog.findViewById(R.id.arranger);
-                arranger.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent i_arranger=new Intent(MainActivity.this,Arranger.class);
-                        startActivity(i_arranger);
-                    }
-                });*/
                 guest=(LinearLayout)myDialog.findViewById(R.id.guest);
                 guest.setOnClickListener(new View.OnClickListener() {
                     @Override

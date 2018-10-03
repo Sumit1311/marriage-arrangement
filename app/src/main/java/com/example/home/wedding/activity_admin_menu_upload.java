@@ -26,29 +26,33 @@ public class activity_admin_menu_upload extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sp1=(Spinner)findViewById(R.id.spin_admin_mtype_upload);
-                String mtype=sp1.getSelectedItem().toString();
-
                 ed1=(EditText)findViewById(R.id.txt_admin_mtime_upload);
-                String mtime=ed1.getText().toString();
+                if(ed1.getText().toString().equals(""))
+                {
+                    ed1.setError("Enter Value");
+                }
+                else {
+                    sp1 = (Spinner) findViewById(R.id.spin_admin_mtype_upload);
+                    String mtype = sp1.getSelectedItem().toString();
+                    String mtime = ed1.getText().toString();
 
-                sp2=(Spinner)findViewById(R.id.spin_admin_mdt_upload);
-                String mdt=sp2.getSelectedItem().toString();
+                    sp2 = (Spinner) findViewById(R.id.spin_admin_mdt_upload);
+                    String mdt = sp2.getSelectedItem().toString();
 
-                RestAdapter ra = new RestAdapter.Builder().setEndpoint(Api.url).build();
-                Api api = ra.create(Api.class);
-                api.insertmenu(mtype, mtime, mdt, new Callback<Response>() {
-                    @Override
-                    public void success(Response response, retrofit.client.Response response2) {
-                        Toast.makeText(getApplicationContext(),"OK",Toast.LENGTH_LONG).show();
-                    }
+                    RestAdapter ra = new RestAdapter.Builder().setEndpoint(Api.url).build();
+                    Api api = ra.create(Api.class);
+                    api.insertmenu(mtype, mtime, mdt, new Callback<Response>() {
+                        @Override
+                        public void success(Response response, retrofit.client.Response response2) {
+                            Toast.makeText(getApplicationContext(), "Menu Details Successfully Uploaded", Toast.LENGTH_LONG).show();
+                        }
 
-                    @Override
-                    public void failure(RetrofitError error) {
-Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_LONG).show();
-                    }
-                });
-
+                        @Override
+                        public void failure(RetrofitError error) {
+                            Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
             }
         });
     }

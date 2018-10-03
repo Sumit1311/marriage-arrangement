@@ -12,7 +12,15 @@ public class Navigation_drawer_admin extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         final View v1=inflater.inflate(R.layout.fragment_navigation_drawer_admin, container, false);
-
+        LinearLayout llhome=(LinearLayout)v1.findViewById(R.id.lladminhome);
+        llhome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),admin_main.class);
+                startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
+            }
+        });
         LinearLayout ll0=(LinearLayout)v1.findViewById(R.id.lladminuser);
         ll0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +42,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_user_add.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
         LinearLayout ll02=(LinearLayout)v1.findViewById(R.id.lladminuserdelete);
@@ -42,10 +51,19 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),admin_user_delete.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
 
             }
         });
-
+        LinearLayout ll03=(LinearLayout)v1.findViewById(R.id.lladminuserview);
+        ll03.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_user_view.class);
+                startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
+            }
+        });
 
         LinearLayout ll1=(LinearLayout)v1.findViewById(R.id.lladmininvitation);
         ll1.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +73,8 @@ public class Navigation_drawer_admin extends Fragment {
                 lladminupload.setVisibility(View.VISIBLE);
                 LinearLayout lladmindelete=(LinearLayout)v1.findViewById(R.id.lladmininvidelete);
                 lladmindelete.setVisibility(View.VISIBLE);
+                LinearLayout lladminview=(LinearLayout)v1.findViewById(R.id.lladmininviview);
+                lladminview.setVisibility(View.VISIBLE);
             }
         });
 
@@ -64,9 +84,27 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_upload_invitation.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
-
+        LinearLayout ll12=(LinearLayout)v1.findViewById(R.id.lladmininvidelete);
+        ll12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_invitation_delete.class);
+                startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
+            }
+        });
+        LinearLayout ll13=(LinearLayout)v1.findViewById(R.id.lladmininviview);
+        ll13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_disp_invitation_list.class);
+                startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
+            }
+        });
         LinearLayout ll2=(LinearLayout)v1.findViewById(R.id.lladminmenu);
         ll2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +126,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_menu_upload.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
         LinearLayout ll22=(LinearLayout)v1.findViewById(R.id.lladminmenuedit);
@@ -96,6 +135,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_menu_edit.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
         LinearLayout ll23=(LinearLayout)v1.findViewById(R.id.lladminmenudelete);
@@ -104,6 +144,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_menu_delete.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
         LinearLayout ll24=(LinearLayout)v1.findViewById(R.id.lladminmenuview);
@@ -112,6 +153,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_menu_view.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
 
@@ -134,6 +176,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_sangit_upload.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
         LinearLayout ll32=(LinearLayout)v1.findViewById(R.id.lladminsangitdelete);
@@ -142,6 +185,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_sangit_delete.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
 
@@ -151,6 +195,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_view_sangitrajani.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
         LinearLayout ll4=(LinearLayout)v1.findViewById(R.id.lladminparticipants);
@@ -159,15 +204,39 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 LinearLayout lladminupload=(LinearLayout)v1.findViewById(R.id.lladminparticipantupload);
                 lladminupload.setVisibility(View.VISIBLE);
-                LinearLayout lladminedit=(LinearLayout)v1.findViewById(R.id.lladminparticipantedit);
-                lladminedit.setVisibility(View.VISIBLE);
                 LinearLayout lladmindelete=(LinearLayout)v1.findViewById(R.id.lladminparticipantdelete);
                 lladmindelete.setVisibility(View.VISIBLE);
                 LinearLayout lladminview=(LinearLayout)v1.findViewById(R.id.lladminparticipantview);
                 lladminview.setVisibility(View.VISIBLE);
             }
         });
-
+        LinearLayout ll41=(LinearLayout)v1.findViewById(R.id.lladminparticipantupload);
+        ll41.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_participants_upload.class);
+                startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
+            }
+        });
+        LinearLayout ll42=(LinearLayout)v1.findViewById(R.id.lladminparticipantdelete);
+        ll42.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_participants_delete.class);
+                startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
+            }
+        });
+        LinearLayout ll43=(LinearLayout)v1.findViewById(R.id.lladminparticipantview);
+        ll43.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_view_sangitrajani.class);
+                startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
+            }
+        });
         LinearLayout ll5=(LinearLayout)v1.findViewById(R.id.lladminothers);
         ll5.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -188,6 +257,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_other_upload.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
 
@@ -197,6 +267,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_other_edit.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
 
@@ -206,6 +277,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_other_delete.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
         LinearLayout ll54=(LinearLayout)v1.findViewById(R.id.lladminothersview);
@@ -214,6 +286,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_other_view.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
         LinearLayout ll6=(LinearLayout)v1.findViewById(R.id.lladmintransport);
@@ -236,6 +309,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_trans_upload.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
         LinearLayout ll62=(LinearLayout)v1.findViewById(R.id.lladmintransportedit);
@@ -244,6 +318,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_trans_edit.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
         LinearLayout ll63=(LinearLayout)v1.findViewById(R.id.lladmintransportdelete);
@@ -252,6 +327,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_trans_delete.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
         LinearLayout ll64=(LinearLayout)v1.findViewById(R.id.lladmintransportview);
@@ -260,6 +336,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_trans_view.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
         LinearLayout ll7=(LinearLayout)v1.findViewById(R.id.lladminroomdetails);
@@ -280,6 +357,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_room_upload.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
 
@@ -289,6 +367,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_room_delete.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
         LinearLayout ll73=(LinearLayout)v1.findViewById(R.id.lladminroomdetailsview);
@@ -297,6 +376,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_guest_room_view.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
         LinearLayout ll8=(LinearLayout)v1.findViewById(R.id.lladminsendsms);
@@ -305,6 +385,7 @@ public class Navigation_drawer_admin extends Fragment {
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_send_smscontactlist.class);
                 startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
         LinearLayout ll9=(LinearLayout)v1.findViewById(R.id.lladminshareapp);

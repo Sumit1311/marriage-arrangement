@@ -1,39 +1,29 @@
 package com.example.home.model;
 
 public class participants {
-    int p_id;
-
-    public int getP_id() {
-        return p_id;
+    public String getPartname() {
+        return partname;
     }
 
-    public void setP_id(int p_id) {
-        this.p_id = p_id;
+    public void setPartname(String partname) {
+        this.partname = partname;
     }
 
-    public String getPname() {
-        return pname;
+    public String getPartno() {
+        return partno;
     }
 
-    public void setPname(String pname) {
-        this.pname = pname;
+    public void setPartno(String partno) {
+        this.partno = partno;
     }
 
-    public String getPmob() {
-        return pmob;
+    public String getParttype() {
+        return parttype;
     }
 
-    public void setPmob(String pmob) {
-        this.pmob = pmob;
+    public void setParttype(String parttype) {
+        this.parttype = parttype;
     }
 
-    public String getPper() {
-        return pper;
-    }
-
-    public void setPper(String pper) {
-        this.pper = pper;
-    }
-
-    String pname,pmob,pper;
+    String partname,partno,parttype;
 }
