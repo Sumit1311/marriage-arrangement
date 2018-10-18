@@ -9,7 +9,17 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="10dp"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:id="@+id/txt_row_other_vidhi"/>
+
+        <TextView
+            android:layout_marginTop="6dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
@@ -19,7 +29,7 @@
             android:id="@+id/txt_row_other_venue"/>
 
         <TextView
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="6dp"
             android:layout_marginLeft="10dp"
             android:textColor="#FFFFFF"
             android:textSize="18dp"
@@ -28,7 +38,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/txt_row_other_poc"/>
         <TextView
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="6dp"
             android:textColor="#FFFFFF"
             android:layout_marginLeft="10dp"
             android:textSize="18dp"

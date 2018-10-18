@@ -9,8 +9,18 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.example.home.model.invitation;
 import com.squareup.picasso.Picasso;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class activity_dispfullimg_guest extends AppCompatActivity {
 
@@ -43,9 +53,26 @@ public class activity_dispfullimg_guest extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dispfullimg_guest);
 
-        path=getIntent().getExtras().getString("path");
-        final ImageView iv=(ImageView)findViewById(R.id.imgfull_guest);
-        Picasso.with(getApplicationContext()).load(path).resize(200,200).into(iv);
+//        path=getIntent().getExtras().getString("path");
+        Retrofit rf=new Retrofit.Builder().baseUrl(Api_disp.url).addConverterFactory(GsonConverterFactory.create()).build();
+        Api_disp api=rf.create(Api_disp.class);
+        Call<List<invitation>> call=api.getinvitation();
+        call.enqueue(new Callback<List<invitation>>() {
+            @Override
+            public void onResponse(Call<List<invitation>> call, Response<List<invitation>> response) {
+                final List<invitation> slist=response.body();
+                path=slist.get(0).getImgpath();
+
+                final ImageView iv=(ImageView)findViewById(R.id.imgfull_guest);
+//                Toast.makeText(getApplicationContext(),slist.get(0).getImgpath(),Toast.LENGTH_LONG).show();
+                Picasso.with(getApplicationContext()).load(slist.get(0).getImgpath()).resize(200,200).into(iv);
+            }
+
+            @Override
+            public void onFailure(Call<List<invitation>> call, Throwable t) {
+                Toast.makeText(getApplicationContext(),t.toString(),Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 }

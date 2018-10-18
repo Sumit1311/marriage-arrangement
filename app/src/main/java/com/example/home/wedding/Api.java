@@ -7,7 +7,7 @@ import retrofit.http.FormUrlEncoded;
 import retrofit.http.POST;
 
 public interface Api {
-    String url="http://192.168.43.42:81/wedding/";
+    String url="http://192.168.43.119/wedding/";
     @FormUrlEncoded
     @POST("/insert_user.php")
     public void insertuser
@@ -68,6 +68,7 @@ public interface Api {
                     @Field("venue") String venue,
                     @Field("poc") String poc,
                     @Field("description") String description,
+                    @Field("timing") String timing,
                     Callback<Response> callback);
 
     @FormUrlEncoded

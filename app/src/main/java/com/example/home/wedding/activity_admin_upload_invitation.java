@@ -35,6 +35,7 @@ public class activity_admin_upload_invitation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_upload_invitation);
+        getSupportActionBar().setTitle("Upload Invitation");
         ed1=(EditText)findViewById(R.id.ed_upload_invi);
         Button b1=(Button)findViewById(R.id.btn_upload_invi);
         b1.setOnClickListener(new View.OnClickListener() {

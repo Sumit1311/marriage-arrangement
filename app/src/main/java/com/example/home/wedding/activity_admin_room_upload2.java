@@ -21,6 +21,7 @@ public class activity_admin_room_upload2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_room_upload2);
+        getSupportActionBar().setTitle("Upload Room Details");
         tv1=(TextView)findViewById(R.id.txt_guestlist);
         for (int i = 0; i < CustomAdapter.imageModelArrayList.size(); i++){
             if(CustomAdapter.imageModelArrayList.get(i).getSelected()) {

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.home.Adapter.participants_adapter;
@@ -27,6 +28,7 @@ public class activity_admin_view_sangitrajani extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_view_sangitrajani);
+        getSupportActionBar().setTitle("Sangit Rajani");
         Retrofit rf=new Retrofit.Builder().baseUrl(Api_disp.url).addConverterFactory(GsonConverterFactory.create()).build();
         Api_disp api=rf.create(Api_disp.class);
         Call<List<sangit>> call=api.getsangit();
@@ -38,9 +40,11 @@ public class activity_admin_view_sangitrajani extends AppCompatActivity {
                 TextView tv1=(TextView)findViewById(R.id.txt_admin_sangit_venue);
                 TextView tv2=(TextView)findViewById(R.id.txt_admin_sangit_description);
                 TextView tv3=(TextView)findViewById(R.id.txt_admin_sangit_poc);
+                TextView tv4=(TextView)findViewById(R.id.txt_admin_sangit_timing);
                 tv1.setText(slist.get(0).getVenue());
                 tv2.setText(slist.get(0).getDescription());
                 tv3.setText(slist.get(0).getPoc());
+                tv4.setText(slist.get(0).getTiming());
             }
 
             @Override
@@ -53,26 +57,31 @@ public class activity_admin_view_sangitrajani extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<participants>> call, Response<List<participants>> response) {
                 List<participants> slist=response.body();
-                ArrayList<participants> al=new ArrayList<>();
-                RecyclerView rv=(RecyclerView)findViewById(R.id.recycler_admin_sangit_view);
-                RecyclerView.LayoutManager lm=new LinearLayoutManager(getApplicationContext());
-                rv.setHasFixedSize(true);
-                rv.setLayoutManager(lm);
-                for(int i=0;i<slist.size();i++)
+                if(slist.size()==0)
                 {
-                    participants p1=new participants();
-                    p1.setPartname(slist.get(i).getPartname());
-                    p1.setPartno(slist.get(i).getPartno());
-                    p1.setParttype(slist.get(i).getParttype());
-                    al.add(p1);
+                    Toast.makeText(getApplicationContext(),"Please First Add Participants Details", Toast.LENGTH_LONG).show();
                 }
-                participants_adapter pa=new participants_adapter(getApplicationContext(),al);
-                rv.setAdapter(pa);
+                else {
+                    ArrayList<participants> al = new ArrayList<>();
+                    RecyclerView rv = (RecyclerView) findViewById(R.id.recycler_admin_sangit_view);
+                    RecyclerView.LayoutManager lm = new LinearLayoutManager(getApplicationContext());
+                    rv.setHasFixedSize(true);
+                    rv.setLayoutManager(lm);
+                    for (int i = 0; i < slist.size(); i++) {
+                        participants p1 = new participants();
+                        p1.setPartname(slist.get(i).getPartname());
+                        p1.setPartno(slist.get(i).getPartno());
+                        p1.setParttype(slist.get(i).getParttype());
+                        al.add(p1);
+                    }
+                    participants_adapter pa = new participants_adapter(getApplicationContext(), al);
+                    rv.setAdapter(pa);
+                }
             }
 
             @Override
             public void onFailure(Call<List<participants>> call, Throwable t) {
-
+Toast.makeText(getApplicationContext(),t.toString(),Toast.LENGTH_LONG).show();
             }
         });
 

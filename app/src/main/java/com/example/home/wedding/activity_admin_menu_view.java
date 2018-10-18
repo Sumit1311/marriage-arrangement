@@ -24,6 +24,7 @@ public class activity_admin_menu_view extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_menu_view);
+        getSupportActionBar().setTitle("Menu Details");
         Retrofit rf=new Retrofit.Builder().baseUrl(Api_disp.url).addConverterFactory(GsonConverterFactory.create()).build();
         Api_disp api=rf.create(Api_disp.class);
         Call<List<menu_details>> call=api.getmenudetails();

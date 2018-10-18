@@ -20,6 +20,7 @@ public class activity_admin_invitation_delete extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_invitation_delete);
+        getSupportActionBar().setTitle("Delete Invitation");
         btn=(Button)findViewById(R.id.btn_delete_invite);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

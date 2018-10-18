@@ -22,6 +22,7 @@ public class activity_admin_menu_edit extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_menu_edit);
+        getSupportActionBar().setTitle("Edit Menu Details");
         btn1=(Button)findViewById(R.id.btn_edit_menu);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override

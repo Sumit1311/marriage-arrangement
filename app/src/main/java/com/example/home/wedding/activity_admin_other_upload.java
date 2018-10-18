@@ -22,6 +22,7 @@ public class activity_admin_other_upload extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_other_upload);
+        getSupportActionBar().setTitle("Upload Other Details");
         btn1=(Button)findViewById(R.id.btn_upload_otherdata);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override

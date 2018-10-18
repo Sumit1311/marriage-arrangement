@@ -36,6 +36,7 @@ public class activity_admin_room_upload extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_room_upload);
+        getSupportActionBar().setTitle("Upload Room Details");
         rv=(RecyclerView)findViewById(R.id.recycler_roomguest);
         Retrofit rf=new Retrofit.Builder().baseUrl(Api_disp.url).addConverterFactory(GsonConverterFactory.create()).build();
         Api_disp api=rf.create(Api_disp.class);

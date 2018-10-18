@@ -28,6 +28,7 @@ ArrayList<other> al;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_other_view);
+        getSupportActionBar().setTitle("Other Details");
         Button b1=(Button)findViewById(R.id.btnotherview);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

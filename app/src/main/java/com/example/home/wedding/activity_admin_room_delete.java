@@ -18,7 +18,7 @@ public class activity_admin_room_delete extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_room_delete);
-
+getSupportActionBar().setTitle("Delete Room Details");
         Button b1=(Button)findViewById(R.id.btn_delete_room);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

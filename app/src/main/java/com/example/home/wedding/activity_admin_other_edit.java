@@ -22,6 +22,7 @@ public class activity_admin_other_edit extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_other_edit);
+        getSupportActionBar().setTitle("Edit Other Details");
         btn=(Button)findViewById(R.id.btn_edit_other);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

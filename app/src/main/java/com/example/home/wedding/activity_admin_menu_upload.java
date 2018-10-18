@@ -22,6 +22,7 @@ public class activity_admin_menu_upload extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_menu_upload);
+        getSupportActionBar().setTitle("Upload Menu Details");
         Button b1=(Button)findViewById(R.id.btn_upload_menu);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

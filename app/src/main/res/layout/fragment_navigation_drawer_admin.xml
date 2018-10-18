@@ -26,20 +26,13 @@
                 android:paddingRight="10dp"
                 android:paddingTop="20dp">
                 <com.makeramen.roundedimageview.RoundedImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@mipmap/vs"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/swastik"
                     app:riv_oval="true"
                     android:layout_marginLeft="15dp"
                     android:id="@+id/imgprofile_admin" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txthead_admin"
-                    android:textStyle="bold"
-                    android:textSize="17dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Welcome Admin"/>
+
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -56,6 +49,7 @@
                     android:src="@drawable/home" />
 
                 <TextView
+                    android:id="@+id/txt_admin_homemenu"
                     android:layout_width="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_height="wrap_content"
@@ -86,9 +80,10 @@
                         android:layout_height="30dp"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="16dp"
-                        android:src="@drawable/invitation" />
+                        android:src="@drawable/users" />
 
                     <TextView
+                        android:id="@+id/txt_admin_usersmenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -117,6 +112,7 @@
                         android:src="@drawable/upload" />
 
                     <TextView
+                        android:id="@+id/txt_admin_addnewusermenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -144,6 +140,7 @@
                         android:src="@drawable/delete" />
 
                     <TextView
+                        android:id="@+id/txt_admin_deleteusermenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -171,6 +168,7 @@
                         android:src="@drawable/view" />
 
                     <TextView
+                        android:id="@+id/txt_admin_viewusermenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -205,6 +203,7 @@
                         android:src="@drawable/invitation" />
 
                     <TextView
+                        android:id="@+id/txt_admin_invitationmenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -233,6 +232,7 @@
                         android:src="@drawable/upload" />
 
                     <TextView
+                        android:id="@+id/txt_admin_inviuploadmenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -260,6 +260,7 @@
                         android:src="@drawable/delete" />
 
                     <TextView
+                        android:id="@+id/txt_admin_deleteinvimenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -287,6 +288,7 @@
                         android:src="@drawable/view" />
 
                     <TextView
+                        android:id="@+id/txt_admin_viewinvimenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -321,6 +323,7 @@
                     android:src="@drawable/menu" />
 
                 <TextView
+                    android:id="@+id/txt_admin_menumenu"
                     android:layout_width="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_height="wrap_content"
@@ -348,6 +351,7 @@
                         android:src="@drawable/upload" />
 
                     <TextView
+                        android:id="@+id/txt_admin_uploadmenumenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -375,6 +379,7 @@
                         android:src="@drawable/edit" />
 
                     <TextView
+                        android:id="@+id/txt_admin_editmenumenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -402,6 +407,7 @@
                         android:src="@drawable/delete" />
 
                     <TextView
+                        android:id="@+id/txt_admin_delmenumenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -429,6 +435,7 @@
                         android:src="@drawable/view" />
 
                     <TextView
+                        android:id="@+id/txt_admin_viewmenumenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -464,6 +471,7 @@
                     android:src="@drawable/sangit_rajani" />
 
                 <TextView
+                    android:id="@+id/txt_admin_sangitmenu"
                     android:layout_width="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_height="wrap_content"
@@ -492,6 +500,7 @@
                         android:src="@drawable/upload" />
 
                     <TextView
+                        android:id="@+id/txt_admin_sangituploadmenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -519,6 +528,7 @@
                         android:src="@drawable/delete" />
 
                     <TextView
+                        android:id="@+id/txt_admin_sangitdeletemenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -546,6 +556,7 @@
                         android:src="@drawable/view" />
 
                     <TextView
+                        android:id="@+id/txt_admin_sangitviewmenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -578,6 +589,7 @@
                     android:src="@drawable/participants" />
 
                 <TextView
+                    android:id="@+id/txt_admin_part"
                     android:layout_width="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_height="wrap_content"
@@ -606,6 +618,7 @@
                         android:src="@drawable/upload" />
 
                     <TextView
+                        android:id="@+id/txt_admin_part_upload"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -633,6 +646,7 @@
                         android:src="@drawable/delete" />
 
                     <TextView
+                        android:id="@+id/txt_admin_parti_delete"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -660,6 +674,7 @@
                         android:src="@drawable/view" />
 
                     <TextView
+                        android:id="@+id/txt_admin_part_view"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -692,6 +707,7 @@
                     android:layout_marginRight="16dp"
                     android:src="@drawable/others" />
                 <TextView
+                    android:id="@+id/txt_admin_others"
                     android:layout_width="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_height="wrap_content"
@@ -720,6 +736,7 @@
                         android:src="@drawable/upload" />
 
                     <TextView
+                        android:id="@+id/txt_admin_others_upload"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -747,6 +764,7 @@
                         android:src="@drawable/edit" />
 
                     <TextView
+                        android:id="@+id/txt_admin_others_edit"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -774,6 +792,7 @@
                         android:src="@drawable/delete" />
 
                     <TextView
+                        android:id="@+id/txt_admin_others_delete"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -801,6 +820,7 @@
                         android:src="@drawable/view" />
 
                     <TextView
+                        android:id="@+id/txt_admin_others_view"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -833,6 +853,7 @@
                         android:layout_marginRight="16dp"
                         android:src="@drawable/transport" />
                     <TextView
+                        android:id="@+id/txt_admin_trans"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -860,6 +881,7 @@
                         android:src="@drawable/upload" />
 
                     <TextView
+                        android:id="@+id/txt_admin_trans_upload"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -887,6 +909,7 @@
                         android:src="@drawable/edit" />
 
                     <TextView
+                        android:id="@+id/txt_admin_trans_edit"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -914,6 +937,7 @@
                         android:src="@drawable/delete" />
 
                     <TextView
+                        android:id="@+id/txt_admin_trans_delete"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -941,6 +965,7 @@
                         android:src="@drawable/view" />
 
                     <TextView
+                        android:id="@+id/txt_admin_trans_view"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -975,6 +1000,7 @@
                         android:src="@drawable/room_details" />
 
                     <TextView
+                        android:id="@+id/txt_admin_room"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -1003,6 +1029,7 @@
                         android:src="@drawable/upload"/>
 
                     <TextView
+                        android:id="@+id/txt_admin_room_upload"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -1023,6 +1050,7 @@
                     android:padding="10dp">
 
                     <ImageView
+
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_centerVertical="true"
@@ -1030,6 +1058,7 @@
                         android:src="@drawable/delete" />
 
                     <TextView
+                        android:id="@+id/txt_admin_room_delete"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -1057,6 +1086,7 @@
                         android:src="@drawable/view" />
 
                     <TextView
+                        android:id="@+id/txt_admin_room_view"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -1086,6 +1116,7 @@
                     android:src="@drawable/send_sms" />
 
                 <TextView
+                    android:id="@+id/txt_admin_sendsms"
                     android:layout_width="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_height="wrap_content"
@@ -1116,6 +1147,7 @@
                     android:src="@drawable/shareapp" />
 
                 <TextView
+                    android:id="@+id/txt_admin_shareapp"
                     android:layout_width="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_height="wrap_content"

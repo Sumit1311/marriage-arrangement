@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/listItemNoteImg"
         android:layout_width="35dp"
@@ -52,8 +55,19 @@
         android:layout_alignStart="@+id/message"
         android:text="Menu Arranger" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/listItemNotTitle"
+        android:layout_marginStart="62dp"
+        android:text="Mobile" />
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <ImageView
-        android:id="@+id/call2"
+        android:id="@+id/listItemNoteImg1"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_alignParentLeft="true"
@@ -63,38 +77,227 @@
         android:layout_marginLeft="12dp"
         android:layout_marginRight="15dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="110sp"
-        android:src="@drawable/contactus"
-        />
+        android:layout_marginTop="20sp"
+        android:src="@drawable/contactus" />
 
     <TextView
-        android:id="@+id/number2"
-        android:layout_width="wrap_content"
+        android:id="@+id/message1"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/call2"
-        android:layout_marginStart="-15dp"
-        android:layout_marginTop="-5dp"
-        android:layout_toEndOf="@+id/call2"
-        android:ellipsize="end"
-        android:singleLine="true"
-        android:text="+91 9638146030"
-        android:textSize="18dp"
+        android:layout_alignBottom="@+id/listItemNoteImg1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="41dp"
+        android:text="Bhavin Chauhan"
+        android:textSize="16dp"
         android:textStyle="bold" />
 
-    <!--view
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="120sp"
-        android:background="#a40404" /-->
+    <TextView
+        android:id="@+id/listItemNotTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/listItemNoteImg1"
+        android:layout_marginStart="-15dp"
+        android:layout_marginTop="-5dp"
+        android:layout_toEndOf="@+id/listItemNoteImg1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="+91 8460177993"
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/listItemNoteImg1"
+        android:layout_alignStart="@+id/message1"
+        android:text="Menu Arranger" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/listItemNotTitle"
+        android:layout_below="@+id/listItemNotTitle1"
         android:layout_marginStart="62dp"
         android:text="Mobile" />
+    </RelativeLayout>
 
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/listItemNoteImg2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20sp"
+        android:src="@drawable/contactus" />
+
+    <TextView
+        android:id="@+id/message2"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/listItemNoteImg2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="41dp"
+        android:text="Bhavin Chauhan"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/listItemNotTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/listItemNoteImg2"
+        android:layout_marginStart="-15dp"
+        android:layout_marginTop="-5dp"
+        android:layout_toEndOf="@+id/listItemNoteImg2"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="+91 8460177993"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/listItemNoteImg2"
+        android:layout_alignStart="@+id/message2"
+        android:text="Menu Arranger" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/listItemNotTitle2"
+        android:layout_marginStart="62dp"
+        android:text="Mobile" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/listItemNoteImg3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20sp"
+        android:src="@drawable/contactus" />
+
+    <TextView
+        android:id="@+id/message3"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/listItemNoteImg3"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="41dp"
+        android:text="Bhavin Chauhan"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/listItemNotTitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/listItemNoteImg3"
+        android:layout_marginStart="-15dp"
+        android:layout_marginTop="-5dp"
+        android:layout_toEndOf="@+id/listItemNoteImg3"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="+91 8460177993"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/listItemNoteImg3"
+        android:layout_alignStart="@+id/message3"
+        android:text="Menu Arranger" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/listItemNotTitle3"
+        android:layout_marginStart="62dp"
+        android:text="Mobile" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/listItemNoteImg4"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20sp"
+            android:src="@drawable/contactus" />
+
+        <TextView
+            android:id="@+id/message4"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/listItemNoteImg4"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="41dp"
+            android:text="Bhavin Chauhan"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/listItemNotTitle4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/listItemNoteImg4"
+            android:layout_marginStart="-15dp"
+            android:layout_marginTop="-5dp"
+            android:layout_toEndOf="@+id/listItemNoteImg4"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="+91 8460177993"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/listItemNoteImg4"
+            android:layout_alignStart="@+id/message4"
+            android:text="Menu Arranger" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/listItemNotTitle4"
+            android:layout_marginStart="62dp"
+            android:text="Mobile" />
+    </RelativeLayout>
+</LinearLayout>

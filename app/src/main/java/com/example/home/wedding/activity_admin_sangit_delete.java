@@ -20,6 +20,7 @@ public class activity_admin_sangit_delete extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_sangit_delete);
+        getSupportActionBar().setTitle("Delete Sangit Details");
         btn=(Button)findViewById(R.id.btn_delete_sangit);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

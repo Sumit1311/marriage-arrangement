@@ -22,6 +22,7 @@ public class activity_admin_participants_upload extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_participants_upload);
+        getSupportActionBar().setTitle("Upload Participants Details");
         btn=(Button)findViewById(R.id.btn_upload_partcipants);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

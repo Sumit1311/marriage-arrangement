@@ -22,6 +22,7 @@ public class activity_admin_trans_upload extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_trans_upload);
+        getSupportActionBar().setTitle("Upload Transportation Details");
         btn=(Button)findViewById(R.id.btn_upload_trans);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

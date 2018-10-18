@@ -20,6 +20,7 @@ public class activity_admin_other_delete extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_other_delete);
+        getSupportActionBar().setTitle("Delete Other Details");
         btn=(Button)findViewById(R.id.btn_delete_otherdata);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

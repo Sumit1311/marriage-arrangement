@@ -3,6 +3,16 @@ package com.example.home.model;
 public class contactmodel {
     private boolean isSelected;
     String cname;
+
+    public String getType_of_guest() {
+        return type_of_guest;
+    }
+
+    public void setType_of_guest(String type_of_guest) {
+        this.type_of_guest = type_of_guest;
+    }
+
+    String type_of_guest;
     public boolean getSelected() {
         return isSelected;
     }

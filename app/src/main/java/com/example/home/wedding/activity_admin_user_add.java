@@ -19,7 +19,7 @@ public class activity_admin_user_add extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_user_add);
-
+        getSupportActionBar().setTitle("Add User");
         Button b1=(Button)findViewById(R.id.btn_add_user);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

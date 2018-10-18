@@ -22,6 +22,7 @@ public class activity_admin_trans_delete extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_trans_delete);
+        getSupportActionBar().setTitle("Delete Transportation Details");
         btn=(Button)findViewById(R.id.btn_delete_trans);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

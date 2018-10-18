@@ -6,15 +6,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity_admin_send_smscontactlist">
-<android.support.v7.widget.RecyclerView
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#FF1100"
+        android:textSize="28dp"
+        android:text="Select Type of Guest"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:entries="@array/ctype"
+        android:id="@+id/spin_admin_contacttype"
+        >
+
+    </Spinner>
+    <android.support.v7.widget.RecyclerView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_weight="1"
+    android:layout_height="0dp"
+    android:layout_weight="7"
     android:id="@+id/recycler_sendmsg">
 </android.support.v7.widget.RecyclerView>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <EditText

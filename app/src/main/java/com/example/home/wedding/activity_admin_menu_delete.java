@@ -18,6 +18,7 @@ public class activity_admin_menu_delete extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_menu_delete);
+        getSupportActionBar().setTitle("Delete Menu Details");
         Button b1=(Button)findViewById(R.id.btn_delete_menu);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -20,6 +20,7 @@ public class activity_admin_participants_delete extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_participants_delete);
+        getSupportActionBar().setTitle("Delete Participants Details");
         btn = (Button) findViewById(R.id.btn_delete_partcipants);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

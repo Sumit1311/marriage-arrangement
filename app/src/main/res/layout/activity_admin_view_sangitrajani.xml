@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:weightSum="12"
     android:layout_height="match_parent"
     tools:context=".activity_admin_view_sangitrajani">
     <LinearLayout
@@ -12,7 +13,7 @@
         android:layout_height="0dp"
         android:orientation="horizontal">
         <TextView
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:textColor="#FF1100"
             android:textStyle="bold"
             android:textSize="20dp"
@@ -22,27 +23,55 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
         <TextView
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:textColor="#FF1100"
             android:textStyle="bold"
             android:textSize="20dp"
-            android:gravity="center"
+            android:gravity="left"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/txt_admin_sangit_venue"/>
 
     </LinearLayout>
-    <android.support.v7.widget.RecyclerView
-        android:layout_marginLeft="10dp"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_weight="7"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="#FF1100"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:text="Timing :"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:textColor="#FF1100"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_admin_sangit_timing"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_weight="8"
         android:layout_height="0dp"
         android:id="@+id/recycler_admin_sangit_view">
 
     </android.support.v7.widget.RecyclerView>
     <TextView
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="5dp"
         android:textStyle="bold"
         android:textColor="#FF1100"
         android:gravity="center"
@@ -52,7 +81,7 @@
         android:layout_height="0dp"
         android:id="@+id/txt_admin_sangit_poc"/>
     <TextView
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="5dp"
         android:textColor="#FF1100"
         android:textSize="20dp"
         android:textStyle="bold"

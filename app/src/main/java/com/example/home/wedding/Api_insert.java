@@ -10,7 +10,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Part;
 
 public interface Api_insert {
-    String url="http://192.168.43.42:81/wedding/";
+    String url="http://192.168.43.119/wedding/";
     @Multipart
     @POST("Api.php?apicall=upload")
     Call<myResponse> uploadinvitation

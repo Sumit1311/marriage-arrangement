@@ -11,8 +11,8 @@
 	$venue=$_POST['venue'];
 	$poc=$_POST['poc'];
 	$description=$_POST['description'];
-	
+	$timing=$_POST['timing'];	
 //$r=mysqli_query($con,"insert into tbl_sangit values('ddd','989898','dd')");	
-	$r=mysqli_query($con,"insert into tbl_sangit values('$venue','$poc','$description')");	
+	$r=mysqli_query($con,"insert into tbl_sangit values('$venue','$poc','$description','$timing')");	
 	mysqli_close($con);
 ?>	  

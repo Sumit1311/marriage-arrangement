@@ -26,20 +26,12 @@
                 android:paddingRight="10dp"
                 android:paddingTop="20dp">
                 <com.makeramen.roundedimageview.RoundedImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@mipmap/vs"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/swastik"
                     app:riv_oval="true"
                     android:layout_marginLeft="15dp"
-                    android:id="@+id/imgprofile" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txthead"
-                    android:textStyle="bold"
-                    android:textSize="17dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Welcome Guest"/>
+                    android:id="@+id/imgprofile_admin" />
             </LinearLayout>
 
             <LinearLayout
@@ -58,7 +50,7 @@
                     android:src="@drawable/home" />
 
                 <TextView
-                    android:id="@+id/home"
+                    android:id="@+id/txt_guest_homemenu"
                     android:layout_width="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_height="wrap_content"
@@ -88,12 +80,44 @@
                     android:src="@drawable/invitation" />
 
                 <TextView
+                    android:id="@+id/txt_guest_invitationmenu"
                     android:layout_marginLeft="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
                     android:text="Invitation"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#666" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp" android:background="#000000"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/llguest_allevents"
+                android:padding="10dp">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/invitation" />
+
+                <TextView
+                    android:id="@+id/txt_guest_alleventsmenu"
+
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:text="All Events"
                     android:textStyle="bold"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="#666" />
@@ -121,6 +145,7 @@
                         android:src="@drawable/timetable" />
 
                     <TextView
+                        android:id="@+id/txt_guest_timetablemenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -148,6 +173,7 @@
                         android:src="@drawable/menu" />
 
                     <TextView
+                        android:id="@+id/txt_guest_menumenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -174,6 +200,7 @@
                         android:src="@drawable/sangit_rajani" />
 
                     <TextView
+                        android:id="@+id/txt_guest_sangitrajanimenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -201,6 +228,7 @@
                         android:src="@drawable/others" />
 
                     <TextView
+                        android:id="@+id/txt_guest_othersmenu"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
@@ -230,6 +258,7 @@
                     android:src="@drawable/transport" />
 
                 <TextView
+                    android:id="@+id/txt_guest_transportmenu"
                     android:layout_marginLeft="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -258,13 +287,44 @@
                     android:src="@drawable/room_details" />
 
                 <TextView
+                    android:id="@+id/txt_guest_roombynumbermenu"
                     android:layout_marginLeft="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:textStyle="bold"
                     android:layout_gravity="center_vertical"
-                    android:text="Room Details"
+                    android:text="Room Details By Room Number"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#666" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp" android:background="#000000"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/llguestroombyname"
+                android:padding="10dp">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/room_details" />
+
+                <TextView
+                    android:id="@+id/txt_guest_roombynamemenu"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:text="Room Details By Name"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="#666" />
             </LinearLayout>
@@ -287,6 +347,7 @@
                     android:src="@drawable/shareapp" />
 
                 <TextView
+                    android:id="@+id/txt_guest_shareappmenu"
                     android:layout_width="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_height="wrap_content"
@@ -316,6 +377,7 @@
                     android:src="@drawable/contactus" />
 
                 <TextView
+                    android:id="@+id/txt_guest_contactmenu"
                     android:layout_width="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_height="wrap_content"

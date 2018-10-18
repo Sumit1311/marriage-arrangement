@@ -13,6 +13,10 @@
         <item>Lunch</item>
         <item>Dinner</item>
     </string-array>
+    <string-array name="ctype">
+        <item>Bride</item>
+        <item>Groom</item>
+    </string-array>
     <string-array name="arranger">
         <item>Admin</item>
         <item>Menu Arranger</item>

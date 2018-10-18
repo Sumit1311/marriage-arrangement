@@ -29,6 +29,7 @@ ArrayList<room> al;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guest_room_view);
+        getSupportActionBar().setTitle("Room Details");
         Button b1=(Button)findViewById(R.id.btnguest_roomview);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

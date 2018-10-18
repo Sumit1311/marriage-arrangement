@@ -72,28 +72,58 @@
             android:parentActivityName=".admin_main" />
         <activity android:name=".activity_admin_send_smscontactlist" />
         <activity android:name=".NextActivity" />
-        <activity android:name=".activity_admin_room_upload" android:parentActivityName=".admin_main" />
-        <activity android:name=".activity_admin_room_upload2" android:parentActivityName=".admin_main" />
-        <activity android:name=".activity_admin_other_upload" android:parentActivityName=".admin_main" />
-        <activity android:name=".activity_admin_other_edit" android:parentActivityName=".admin_main" />
-        <activity android:name=".activity_admin_other_delete" android:parentActivityName=".admin_main" />
-        <activity android:name=".activity_admin_trans_upload" android:parentActivityName=".admin_main" />
-        <activity android:name=".activity_admin_trans_edit" android:parentActivityName=".admin_main" />
-        <activity android:name=".activity_admin_trans_delete" android:parentActivityName=".admin_main" />
-        <activity android:name=".activity_admin_room_delete" android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_room_upload"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_room_upload2"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_other_upload"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_other_edit"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_other_delete"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_trans_upload"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_trans_edit"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_trans_delete"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_room_delete"
+            android:parentActivityName=".admin_main" />
         <activity android:name=".activity_admin_trans_view" />
-        <activity android:name=".activity_guest_room_view"  />
-        <activity android:name=".activity_admin_other_view"  />
-        <activity android:name=".activity_admin_view_sangitrajani"  />
-        <activity android:name=".activity_admin_participants_upload" android:parentActivityName=".admin_main" />
-        <activity android:name=".activity_admin_participants_delete" android:parentActivityName=".admin_main" />
-        <activity android:name=".activity_admin_invitation_delete" android:parentActivityName=".admin_main" />
-        <activity android:name=".activity_admin_user_view" android:parentActivityName=".admin_main"/>
-        <activity android:name=".activity_admin_contact_us" android:parentActivityName=".admin_main" />
-        <activity android:name=".activity_arranger_menu"  />
+        <activity android:name=".activity_guest_room_view" />
+        <activity android:name=".activity_admin_other_view" />
+        <activity android:name=".activity_admin_view_sangitrajani" />
+        <activity
+            android:name=".activity_admin_participants_upload"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_participants_delete"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_invitation_delete"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_user_view"
+            android:parentActivityName=".admin_main" />
+        <activity
+            android:name=".activity_admin_contact_us"
+            android:parentActivityName=".admin_main" />
+        <activity android:name=".activity_arranger_menu" />
         <activity android:name=".activity_arranger_transport" />
         <activity android:name=".activity_arranger_sangit" />
-        <activity android:name=".activity_arranger_other"></activity>
+        <activity android:name=".activity_arranger_other" />
+        <activity android:name=".activity_disp_room_byname"/>
+        <activity android:name=".activity_disp_allevents" android:parentActivityName=".guest_main"></activity>
     </application>
 
 </manifest>

@@ -28,6 +28,7 @@ public class activity_admin_trans_view extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_trans_view);
+        getSupportActionBar().setTitle("Transport Details");
         Button b1=(Button)findViewById(R.id.btnadmintransview);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

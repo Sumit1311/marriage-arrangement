@@ -3,6 +3,15 @@ package com.example.home.model;
 public class sangit {
     String venue;
 
+    public String getTiming() {
+        return timing;
+    }
+
+    public void setTiming(String timing) {
+        this.timing = timing;
+    }
+
+    String timing;
     public String getVenue() {
         return venue;
     }

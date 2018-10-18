@@ -36,6 +36,7 @@ public class other_adapter extends RecyclerView.Adapter<other_adapter.ViewHolder
         holder.tv1.setText(al.get(position).getVenue());
         holder.tv2.setText(al.get(position).getDescription());
         holder.tv3.setText(al.get(position).getPoc());
+        holder.tv4.setText(al.get(position).getVidhiname());
         holder.ll1.setBackgroundResource(R.drawable.vidhi);
         holder.ll1.getBackground().setAlpha(70);
 
@@ -47,13 +48,14 @@ public class other_adapter extends RecyclerView.Adapter<other_adapter.ViewHolder
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tv1,tv2,tv3;
+        TextView tv1,tv2,tv3,tv4;
         LinearLayout ll1;
         public ViewHolder(View itemView) {
             super(itemView);
             tv1=(TextView)itemView.findViewById(R.id.txt_row_other_venue);
             tv2=(TextView)itemView.findViewById(R.id.txt_row_other_desc);
             tv3=(TextView)itemView.findViewById(R.id.txt_row_other_poc);
+            tv4=(TextView)itemView.findViewById(R.id.txt_row_other_vidhi);
             ll1=(LinearLayout)itemView.findViewById(R.id.llrowotherview);
         }
     }

@@ -42,7 +42,10 @@ public class Login_activity extends AppCompatActivity {
                     Retrofit rf = new Retrofit.Builder().baseUrl(Api_disp.url).addConverterFactory(GsonConverterFactory.create()).build();
                     Api_disp api = rf.create(Api_disp.class);
                     Call<List<user>> call = api.getuser();
-                    call.enqueue(new Callback<List<user>>() {
+                Intent i1 = new Intent(getApplicationContext(), admin_main.class);
+                startActivity(i1);
+
+                 call.enqueue(new Callback<List<user>>() {
                         @Override
                         public void onResponse(Call<List<user>> call, Response<List<user>> response) {
                             List<user> slist = response.body();

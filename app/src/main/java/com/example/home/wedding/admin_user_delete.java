@@ -18,6 +18,7 @@ public class admin_user_delete extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_user_delete);
+        getSupportActionBar().setTitle("Delete User Details");
         Button b1=(Button)findViewById(R.id.btn_delete_user);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

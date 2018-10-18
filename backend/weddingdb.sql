@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2018 at 01:44 PM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.1.11
+-- Generation Time: Oct 18, 2018 at 12:34 PM
+-- Server version: 10.1.29-MariaDB
+-- PHP Version: 7.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -40,20 +40,19 @@ CREATE TABLE `t3` (
 
 CREATE TABLE `tbl_contact` (
   `cname` text NOT NULL,
-  `cno` text NOT NULL
+  `cno` text NOT NULL,
+  `type_of_guest` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_contact`
 --
 
-INSERT INTO `tbl_contact` (`cname`, `cno`) VALUES
-('Bhavin', '9723253190'),
-('Raj', '7874667055'),
-('Raju', '9879818332'),
-('Raja', '8200912237'),
-('Vaishnavi', '8780016500'),
-('Bhavin S Chauhan', '9988998899');
+INSERT INTO `tbl_contact` (`cname`, `cno`, `type_of_guest`) VALUES
+('Vaishnavi', '8780016500', 'Bride'),
+('Sumit', '7588415318', 'Groom'),
+('Bhavin', '7874667055', 'Bride'),
+('Raja', '9879818332', 'Groom');
 
 -- --------------------------------------------------------
 
@@ -71,9 +70,7 @@ CREATE TABLE `tbl_invitation` (
 --
 
 INSERT INTO `tbl_invitation` (`pageno`, `imgpath`) VALUES
-('First Page', '1538475029615.jpg'),
-('Second Page', '1538475069251.jpg'),
-('Third Page', '1538475091494.jpg');
+('hello', '1539761451098.jpg');
 
 -- --------------------------------------------------------
 
@@ -113,8 +110,7 @@ CREATE TABLE `tbl_other` (
 --
 
 INSERT INTO `tbl_other` (`venue`, `poc`, `description`, `vidhiname`) VALUES
-('hfhfsjshdh', '65656565', 'bgdhcg', 'Beva'),
-('lonar', '7405243489', 'hellooo', 'Phera');
+('hfhfsjshdh', '65656565', 'bgdhcg', 'Beva');
 
 -- --------------------------------------------------------
 
@@ -133,8 +129,11 @@ CREATE TABLE `tbl_participants` (
 --
 
 INSERT INTO `tbl_participants` (`partname`, `partno`, `parttype`) VALUES
-('Raj', '87878787', 'drama'),
-('vaishnavi', '8780016500', 'drama');
+('vaishnavi', '8780016500', 'drama'),
+('vaishnavi', '8780016500', 'dance'),
+('vaishnavi', '8780016500', 'drama'),
+('vaishnavi', '8780016500', 'dance'),
+('vaishnavi sarda aaaaammmm', '8780016500', 'jbvhjkmbcghhjjkkmmnbn');
 
 -- --------------------------------------------------------
 
@@ -153,22 +152,11 @@ CREATE TABLE `tbl_room` (
 --
 
 INSERT INTO `tbl_room` (`roomno`, `guest_nm`, `guest_mob`) VALUES
-('1', 'Bhavin', '9898989898'),
-('1', 'Bhavin', '9898989898'),
+('5', 'Vaishnavi', '8780016500'),
 ('1', 'Vaishnavi', '8780016500'),
-('1', 'Raj', '7874667055'),
+('2', 'vaishnavi', '8780016500'),
 ('1', 'Vaishnavi', '8780016500'),
-('1', 'Raja', '8200912237'),
-('1', 'Raju', '9879818332'),
-('6', 'Raja', '8200912237'),
-('6', 'Vaishnavi', '8780016500'),
-('6', 'Raju', '9879818332'),
-('6', 'Raj', '7874667055'),
-('6', 'Raju', '9879818332'),
-('6', 'Raja', '8200912237'),
-('2', 'Vaishnavi', '8780016500'),
-('2', 'Raju', '9879818332'),
-('2', 'Bhavin S Chauhan', '9988998899');
+('2', 'vaishnavi', '8780016500');
 
 -- --------------------------------------------------------
 
@@ -179,15 +167,16 @@ INSERT INTO `tbl_room` (`roomno`, `guest_nm`, `guest_mob`) VALUES
 CREATE TABLE `tbl_sangit` (
   `venue` text NOT NULL,
   `poc` text NOT NULL,
-  `description` text NOT NULL
+  `description` text NOT NULL,
+  `timing` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_sangit`
 --
 
-INSERT INTO `tbl_sangit` (`venue`, `poc`, `description`) VALUES
-('lonar', '7588415318', 'hello...');
+INSERT INTO `tbl_sangit` (`venue`, `poc`, `description`, `timing`) VALUES
+('Lonar', '8780016500', 'Hii...This is Sangeet Event...', '7 to 10');
 
 -- --------------------------------------------------------
 
@@ -209,7 +198,7 @@ CREATE TABLE `tbl_transport` (
 --
 
 INSERT INTO `tbl_transport` (`t_id`, `route`, `drivername`, `driverno`, `vehicleno`, `dt`) VALUES
-(1, 'Lonar to Sailu', 'fff', '222', 'fff', 'Lonar to Sailu');
+(1, 'Lonar to Sailu', 'vvvv', 'vvvvv', 'fff', 'Lonar to Sailu');
 
 -- --------------------------------------------------------
 
@@ -228,10 +217,8 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`uname`, `pwd`, `arrangertype`) VALUES
-('bsc', 'bsc', 'Menu Arranger'),
-('vv', 'vv', 'Transport Arranger'),
 ('vaishnavi', 'vaishnavi', 'Admin'),
-('saurabh toshniwal', 'saurabh@123', 'Menu Arranger');
+('Amit Toshniwal', 'Amit@123', 'Admin');
 
 --
 -- Indexes for dumped tables

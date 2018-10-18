@@ -2,6 +2,7 @@ package com.example.home.wedding;
 
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -28,6 +29,45 @@ public class Navigation_drawer_guest extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v=inflater.inflate(R.layout.fragment_navigation_drawer_guest, container, false);
+        TextView tv1=(TextView)v.findViewById(R.id.txt_guest_invitationmenu);
+        Typeface custom_font = Typeface.createFromAsset(getActivity().getAssets(),  "font/Dirty Queen Personal Use.ttf");
+        tv1.setTypeface(custom_font);
+
+        TextView tv2=(TextView)v.findViewById(R.id.txt_guest_homemenu);
+        tv2.setTypeface(custom_font);
+
+        TextView tv3=(TextView)v.findViewById(R.id.txt_guest_alleventsmenu);
+        tv3.setTypeface(custom_font);
+
+        TextView tv4=(TextView)v.findViewById(R.id.txt_guest_timetablemenu);
+        tv4.setTypeface(custom_font);
+
+
+        TextView tv5=(TextView)v.findViewById(R.id.txt_guest_menumenu);
+        tv5.setTypeface(custom_font);
+
+        TextView tv6=(TextView)v.findViewById(R.id.txt_guest_sangitrajanimenu);
+        tv6.setTypeface(custom_font);
+
+        TextView tv7=(TextView)v.findViewById(R.id.txt_guest_othersmenu);
+        tv7.setTypeface(custom_font);
+
+        TextView tv8=(TextView)v.findViewById(R.id.txt_guest_transportmenu);
+        tv8.setTypeface(custom_font);
+
+        TextView tv9=(TextView)v.findViewById(R.id.txt_guest_roombynumbermenu);
+        tv9.setTypeface(custom_font);
+
+        TextView tv10=(TextView)v.findViewById(R.id.txt_guest_roombynamemenu);
+        tv10.setTypeface(custom_font);
+
+        TextView tv11=(TextView)v.findViewById(R.id.txt_guest_shareappmenu);
+        tv11.setTypeface(custom_font);
+
+        TextView tv12=(TextView)v.findViewById(R.id.txt_guest_contactmenu);
+        tv12.setTypeface(custom_font);
+
+
         LinearLayout ll1=(LinearLayout)v.findViewById(R.id.llguesthome);
         ll1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +84,8 @@ public class Navigation_drawer_guest extends Fragment {
         ll2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i1=new Intent(getActivity().getApplicationContext(),activity_disp_invitation_list.class);
+                //Intent i1=new Intent(getActivity().getApplicationContext(),activity_disp_invitation_list.class);
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_dispfullimg_guest.class);
                 startActivity(i1);
                 getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
@@ -112,7 +153,7 @@ public class Navigation_drawer_guest extends Fragment {
                     i.setType("text/plain");
                     i.putExtra(Intent.EXTRA_SUBJECT, "Wedding Invitation");
                     String message = "\nLet me recommend you this application\n\n";
-                    message = message + "https://play.google.com/store/apps/details?id=com.example.sapna.recipeapp";
+                    message = message + "http://wedding.ajab-gajab.com:8080/wedding/app-debug.apk";
                     i.putExtra(Intent.EXTRA_TEXT, message);
                     startActivity(Intent.createChooser(i,"choose one"));
                 } catch(Exception e)
@@ -131,11 +172,30 @@ public class Navigation_drawer_guest extends Fragment {
             }
         });
 
+        LinearLayout ll8=(LinearLayout)v.findViewById(R.id.llguestroombyname);
+        ll8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_disp_room_byname.class);
+                startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
+            }
+        });
         LinearLayout ll7=(LinearLayout)v.findViewById(R.id.llguestcontactus);
         ll7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_contact_us.class);
+                startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
+            }
+        });
+
+        LinearLayout ll9=(LinearLayout)v.findViewById(R.id.llguest_allevents);
+        ll9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_disp_allevents.class);
                 startActivity(i1);
                 getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }

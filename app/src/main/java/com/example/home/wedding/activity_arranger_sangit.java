@@ -12,7 +12,7 @@ public class activity_arranger_sangit extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arranger_sangit);
-        getSupportActionBar().setTitle("Transport Arranger");
+        getSupportActionBar().setTitle("Sangit Arranger");
 
         btn1=(Button)findViewById(R.id.btn_add_sangit);
         btn1.setOnClickListener(new View.OnClickListener() {

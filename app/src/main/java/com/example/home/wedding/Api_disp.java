@@ -16,7 +16,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface Api_disp {
-    String url = "http://192.168.43.42:81/wedding/";
+    String url = "http://192.168.43.119/wedding/";
     @GET("disp_user.php")
     Call<List<user>> getuser();
 
