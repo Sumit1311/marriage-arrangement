@@ -16,7 +16,7 @@
 	$statement->bind_result($uname,$pwd,$arrangertype);
 	while($statement->fetch())
 	{
-	//$absurl = 'http://' . gethostbyname(gethostname()) .':81'. '/wedding' . UPLOAD_PATH . $menu_img;	
+	//$absurl = 'http://' . gethostbyname(gethostname()) . '/wedding' . UPLOAD_PATH . $menu_img;	
 
 
 	$temp=['uname'=>$uname,'pwd'=>$pwd,'arrangertype'=>$arrangertype];

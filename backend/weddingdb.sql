@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 18, 2018 at 12:34 PM
+-- Generation Time: Oct 24, 2018 at 04:10 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -41,18 +41,21 @@ CREATE TABLE `t3` (
 CREATE TABLE `tbl_contact` (
   `cname` text NOT NULL,
   `cno` text NOT NULL,
-  `type_of_guest` text NOT NULL
+  `type_of_guest` text NOT NULL,
+  `guestaddr` text NOT NULL,
+  `guestcat` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_contact`
 --
 
-INSERT INTO `tbl_contact` (`cname`, `cno`, `type_of_guest`) VALUES
-('Vaishnavi', '8780016500', 'Bride'),
-('Sumit', '7588415318', 'Groom'),
-('Bhavin', '7874667055', 'Bride'),
-('Raja', '9879818332', 'Groom');
+INSERT INTO `tbl_contact` (`cname`, `cno`, `type_of_guest`, `guestaddr`, `guestcat`) VALUES
+('Vaishnavi', '8780016500', 'Bride', '', ''),
+('Sumit', '7588415318', 'Groom', '', ''),
+('Bhavin', '7874667055', 'Bride', '', ''),
+('Raja', '9879818332', 'Groom', '', ''),
+('ggg', 'gff', 'gggg', 'fff', 'gggg');
 
 -- --------------------------------------------------------
 
@@ -70,7 +73,7 @@ CREATE TABLE `tbl_invitation` (
 --
 
 INSERT INTO `tbl_invitation` (`pageno`, `imgpath`) VALUES
-('hello', '1539761451098.jpg');
+('first\n', '1540097195929.jpg');
 
 -- --------------------------------------------------------
 
@@ -218,7 +221,8 @@ CREATE TABLE `tbl_user` (
 
 INSERT INTO `tbl_user` (`uname`, `pwd`, `arrangertype`) VALUES
 ('vaishnavi', 'vaishnavi', 'Admin'),
-('Amit Toshniwal', 'Amit@123', 'Admin');
+('Amit Toshniwal', 'Amit@123', 'Admin'),
+('sumit', 'sumit', 'Menu Arranger');
 
 --
 -- Indexes for dumped tables

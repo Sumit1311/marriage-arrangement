@@ -15,13 +15,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class admin_main extends AppCompatActivity
 {
     public static DrawerLayout mDrawerLayout;
     private Toolbar mToolbar;
     private ActionBarDrawerToggle mDrawerToggle;
-
+        int days;
+        Date strDate;
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getTitle().equals("Logout"))
@@ -42,6 +52,46 @@ public class admin_main extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_main);
+
+        String my_date = "31/12/2018";
+        Date c = Calendar.getInstance().getTime();
+        //System.out.println("Current time => " + c);
+
+        /*SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
+
+        String formattedDate = df.format(c);
+
+        Toast.makeText(getApplicationContext(),formattedDate,Toast.LENGTH_LONG).show();
+*/
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
+        long l=System.currentTimeMillis();
+        String dateString = "12-12-2018 07:00:32";
+        try{
+            //formatting the dateString to convert it into a Date
+            Date date = sdf.parse(dateString);
+            //System.out.println("Given Time in milliseconds : "+date.getTime());
+            long fl=date.getTime();
+            long dl=fl-l;
+            Calendar calendar = Calendar.getInstance();
+            days = (int) (dl / (1000*60*60*24));
+            //Setting the Calendar date and time to the given date and time
+            calendar.setTime(date);
+            //System.out.println("Given Time in milliseconds : "+calendar.getTimeInMillis());
+            //Toast.makeText(getApplicationContext(),days+" "+dl+" "+fl+" "+l,Toast.LENGTH_LONG).show();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+
+        Animation startanim= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.blinkinganimation);
+        TextView tv1=(TextView)findViewById(R.id.txtmrgdate);
+        tv1.setText(days+"Days Remaining");
+        tv1.startAnimation(startanim);
+
+
+
+
         mToolbar=(Toolbar)findViewById(R.id.action_bar);
         //mToolbar = (Toolbar) findViewById(R.id.action_bar);
         setSupportActionBar(mToolbar);

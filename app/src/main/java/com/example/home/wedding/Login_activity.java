@@ -42,51 +42,58 @@ public class Login_activity extends AppCompatActivity {
                     Retrofit rf = new Retrofit.Builder().baseUrl(Api_disp.url).addConverterFactory(GsonConverterFactory.create()).build();
                     Api_disp api = rf.create(Api_disp.class);
                     Call<List<user>> call = api.getuser();
-                Intent i1 = new Intent(getApplicationContext(), admin_main.class);
-                startActivity(i1);
+                //Intent i1 = new Intent(getApplicationContext(), admin_main.class);
+                //startActivity(i1);
 
                  call.enqueue(new Callback<List<user>>() {
                         @Override
                         public void onResponse(Call<List<user>> call, Response<List<user>> response) {
                             List<user> slist = response.body();
                             for (int i = 0; i < slist.size(); i++) {
+
                                 if (unm.equals(slist.get(i).getUname()) && pwdadmin.equals(slist.get(i).getPwd()) && arrtype.equals(slist.get(i).getArrangertype()))
                                 {
-                                    //Toast.makeText(getApplicationContext(), slist.get(i).getArrangertype(), Toast.LENGTH_LONG).show();
+                                 //   Toast.makeText(getApplicationContext(),unm+pwdadmin,Toast.LENGTH_LONG).show();
                                     if(arrtype.equals("Admin"))
                                     {
                                         Intent i1 = new Intent(getApplicationContext(), admin_main.class);
                                         startActivity(i1);
                                         overridePendingTransition(R.anim.goup,R.anim.down);
+                                        finish();
                                     }
                                     else if(arrtype.equals("Menu Arranger")) {
                                         Intent i1 = new Intent(getApplicationContext(), activity_arranger_menu.class);
                                         startActivity(i1);
                                         overridePendingTransition(R.anim.goup,R.anim.down);
+                                        finish();
                                     }
                                     else if(arrtype.equals("Transport Arranger"))
                                     {
                                         Intent i1 = new Intent(getApplicationContext(), activity_arranger_transport.class);
                                         startActivity(i1);
                                         overridePendingTransition(R.anim.goup,R.anim.down);
+                                        finish();
                                     }
                                     else if(arrtype.equals("Vidhi Arranger"))
                                     {
                                         Intent i1 = new Intent(getApplicationContext(), activity_arranger_other.class);
                                         startActivity(i1);
                                         overridePendingTransition(R.anim.goup,R.anim.down);
+                                        finish();
                                     }
                                     else if(arrtype.equals("Room Management"))
                                     {
                                         Intent i1 = new Intent(getApplicationContext(), activity_arranger_menu.class);
                                         startActivity(i1);
                                         overridePendingTransition(R.anim.goup,R.anim.down);
+                                        finish();
                                     }
                                     else if(arrtype.equals("Sangit Arranger"))
                                     {
                                         Intent i1 = new Intent(getApplicationContext(), activity_arranger_sangit.class);
                                         startActivity(i1);
                                         overridePendingTransition(R.anim.goup,R.anim.down);
+                                        finish();
                                     }
                                 }
 

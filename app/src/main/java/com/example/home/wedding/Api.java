@@ -16,6 +16,16 @@ public interface Api {
                     @Field("pwd") String pwd,
                     @Field("arrangertype") String arrangertype,
                     Callback<Response> callback);
+    @FormUrlEncoded
+    @POST("/insert_guest.php")
+    public void insertguest
+            (
+                    @Field("cname") String cname,
+                    @Field("cno") String cno,
+                    @Field("type_of_guest") String type_of_guest,
+                    @Field("guestaddr") String guestaddr,
+                    @Field("guestcat") String guestcat,
+                    Callback<Response> callback);
 
     @FormUrlEncoded
     @POST("/delete_user.php")

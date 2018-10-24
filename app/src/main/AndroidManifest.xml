@@ -122,8 +122,11 @@
         <activity android:name=".activity_arranger_transport" />
         <activity android:name=".activity_arranger_sangit" />
         <activity android:name=".activity_arranger_other" />
-        <activity android:name=".activity_disp_room_byname"/>
-        <activity android:name=".activity_disp_allevents" android:parentActivityName=".guest_main"></activity>
+        <activity android:name=".activity_disp_room_byname" />
+        <activity
+            android:name=".activity_disp_allevents"
+            android:parentActivityName=".guest_main" />
+        <activity android:name=".activity_admin_upload_guest" android:parentActivityName=".admin_main"></activity>
     </application>
 
 </manifest>

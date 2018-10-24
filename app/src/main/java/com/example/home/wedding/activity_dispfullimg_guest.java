@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.home.model.invitation;
@@ -62,9 +63,11 @@ public class activity_dispfullimg_guest extends AppCompatActivity {
             public void onResponse(Call<List<invitation>> call, Response<List<invitation>> response) {
                 final List<invitation> slist=response.body();
                 path=slist.get(0).getImgpath();
-
+                TextView tv1=(TextView)findViewById(R.id.txt_inviname);
+                tv1.setText(slist.get(0).getPageno());
                 final ImageView iv=(ImageView)findViewById(R.id.imgfull_guest);
 //                Toast.makeText(getApplicationContext(),slist.get(0).getImgpath(),Toast.LENGTH_LONG).show();
+
                 Picasso.with(getApplicationContext()).load(slist.get(0).getImgpath()).resize(200,200).into(iv);
             }
 

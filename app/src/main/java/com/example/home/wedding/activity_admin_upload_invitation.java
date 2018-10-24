@@ -67,6 +67,9 @@ public class activity_admin_upload_invitation extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<myResponse> call, Response<myResponse> response) {
                         Toast.makeText(getApplicationContext(),"Upload",Toast.LENGTH_LONG).show();
+                        Intent i1=new Intent(getApplicationContext(),admin_main.class);
+                        startActivity(i1);
+                        finish();
                         //Toast.makeText(getApplicationContext(),,Toast.LENGTH_LONG).show();
                     }
                     @Override

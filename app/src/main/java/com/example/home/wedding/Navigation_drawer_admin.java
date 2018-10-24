@@ -131,7 +131,10 @@ public class Navigation_drawer_admin extends Fragment {
 
         TextView tv38=(TextView)v1.findViewById(R.id.txt_admin_shareapp);
         tv38.setTypeface(custom_font);
-
+        TextView tv39=(TextView)v1.findViewById(R.id.txt_admin_guest);
+        tv39.setTypeface(custom_font);
+    TextView tv40=(TextView)v1.findViewById(R.id.txt_admin_add_guest);
+        tv40.setTypeface(custom_font);
         LinearLayout llhome=(LinearLayout)v1.findViewById(R.id.lladminhome);
         llhome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -605,6 +608,31 @@ public class Navigation_drawer_admin extends Fragment {
                 getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
             }
         });
+
+        LinearLayout ll10=(LinearLayout)v1.findViewById(R.id.lladminguest);
+        final LinearLayout ll101=(LinearLayout)v1.findViewById(R.id.lladminguestadd);
+        ll10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(ll101.getVisibility()==View.VISIBLE)
+            {
+                ll101.setVisibility(View.GONE);
+            }
+            else {
+                    ll101.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        ll101.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1=new Intent(getActivity().getApplicationContext(),activity_admin_upload_guest.class);
+                startActivity(i1);
+                getActivity().overridePendingTransition(R.anim.goup,R.anim.down);
+
+            }
+        });
+
         LinearLayout ll9=(LinearLayout)v1.findViewById(R.id.lladminshareapp);
         ll9.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -20,7 +20,6 @@ public class activity_arranger_menu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),activity_admin_menu_upload.class);
                 startActivity(i);
-                finish();
             }
         });
         btn2=(Button)findViewById(R.id.btn_edit_menu);

@@ -16,7 +16,7 @@ define('UPLOAD_PATH', '/uploads_invitation/');
 	$statement->bind_result($pageno,$imgpath);
 	while($statement->fetch())
 	{
-	$absurl = 'http://' . gethostbyname(gethostname()) .':81'. '/wedding' . UPLOAD_PATH . $imgpath;	
+	$absurl = 'http://' . gethostbyname(gethostname()) . '/wedding' . UPLOAD_PATH . $imgpath;	
 
 
 	$temp=['pageno'=>$pageno,'imgpath'=>$absurl];
