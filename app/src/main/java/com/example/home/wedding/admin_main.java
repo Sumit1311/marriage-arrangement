@@ -55,14 +55,7 @@ public class admin_main extends AppCompatActivity
 
         String my_date = "31/12/2018";
         Date c = Calendar.getInstance().getTime();
-        //System.out.println("Current time => " + c);
 
-        /*SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
-
-        String formattedDate = df.format(c);
-
-        Toast.makeText(getApplicationContext(),formattedDate,Toast.LENGTH_LONG).show();
-*/
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
         long l=System.currentTimeMillis();

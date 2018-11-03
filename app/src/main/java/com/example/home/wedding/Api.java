@@ -6,8 +6,8 @@ import retrofit.http.Field;
 import retrofit.http.FormUrlEncoded;
 import retrofit.http.POST;
 
-public interface Api {
-    String url="http://192.168.43.119/wedding/";
+public interface Api{
+    String url= "http://www.wedding.ajab-gajab.com:8080/wedding/";
     @FormUrlEncoded
     @POST("/insert_user.php")
     public void insertuser

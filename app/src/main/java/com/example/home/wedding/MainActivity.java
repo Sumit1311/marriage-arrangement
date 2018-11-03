@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(i_guest);
                     }
                 });
-                myDialog.setCancelable(false);
+                //myDialog.setCancelable(false);
                 myDialog.show();
             }
         },splashtime);
