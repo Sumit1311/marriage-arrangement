@@ -10,6 +10,6 @@
 	$pageno=$_POST['pageno'];
 	
 		
-	$r=mysqli_query($con,"delete from tbl_invitation where pageno='$pageno'");	
+	$r=mysqli_query($con,"delete from tbl_invitation where pageno LIKE '%$pageno%'");	
 	
 ?>	  
