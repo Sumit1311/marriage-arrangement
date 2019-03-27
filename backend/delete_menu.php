@@ -9,6 +9,6 @@
 	$mid=$_POST['mid'];
 	
 	//$r=mysqli_query($con,"delete from tbl_menu where m_id=2");	
-	$r=mysqli_query($con,"delete from tbl_menu where m_id=$mid");	
+	$r=mysqli_query($con,"delete from tbl_menu where m_id='$mid'");	
 	
 ?>	  

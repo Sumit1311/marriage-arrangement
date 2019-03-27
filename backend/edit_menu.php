@@ -14,6 +14,6 @@
 //$r=mysqli_query($con,"update tbl_menu set menu_type='ddd',menu_time='8 to 9',menu_dt='1000' where m_id=2");	
 	
 	
-	$r=mysqli_query($con,"update tbl_menu set menu_type='$menu_type',menu_time='$menu_time',menu_dt='$menu_dt' where m_id=$mid");	
+	$r=mysqli_query($con,"update tbl_menu set menu_type='$menu_type',menu_time='$menu_time',menu_dt='$menu_dt' where m_id='$mid' ");	
 	
 ?>	  
